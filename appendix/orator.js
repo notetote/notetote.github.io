@@ -2,6 +2,6 @@
     let script;
     script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "js/fav.js.min";
+    script.src = "js/fav.min.js";
     document.body.appendChild(script);
 })();
