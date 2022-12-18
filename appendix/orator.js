@@ -22,7 +22,3 @@ function addStyle(key) {
 addScript("js/fav.min.js", true);
 addStyle("css/main.min.css");
 addStyle("css/fontasm.min.css");
-
-window.onload = function() {
-    //add things after page loads;
-}
