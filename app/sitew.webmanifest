@@ -1,0 +1,19 @@
+{
+    "name": "NoteNibba",
+    "short_name": "NoteNibba",
+    "icons": [
+        {
+            "src": "app/192w.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "app/512w.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#1c1c1c",
+    "background_color": "#1c1c1c",
+    "display": "standalone"
+}
