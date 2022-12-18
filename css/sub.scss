@@ -1,0 +1,66 @@
+@mixin resMainPad($width, $pad) {
+    @media screen and (min-width: $width) {
+        padding: 0 $pad;
+    }
+}
+
+main {
+    color: var(--text-color);
+    background: var(--results-background);
+}
+section {
+    width: 100%;
+    min-height: 32rem;
+    word-wrap: break-word;
+    padding: 0 2rem;
+    @include resMainPad(1399px, 8rem);
+    @include resMainPad(1699px, 15rem);
+    svg {
+        height: 26rem;
+        width: 26rem;
+    }
+    h1, p {
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        font-weight: 600;
+        font-size: 3.56rem;
+        max-width: 32rem;
+        color: var(--accent-color);
+    }
+    p {
+        font-weight: 400;
+        font-size: 1.1rem;
+        max-width: 32rem;
+        margin-top: 1.5rem;
+    }
+    &:first-of-type {
+        padding: 2rem 0 0 0;
+    }
+    &:last-of-type {
+        padding: 0 0 2rem 0;
+    }
+    &.right {
+        h1, p {
+            text-align: right;
+        }
+    }
+    &.left {
+        h1, p {
+            text-align: left;
+        }
+    }
+    &.center {
+        min-height: auto;
+        p {
+            text-align: center;
+            margin: 1.5rem 0;
+            max-width: 50rem;
+        }
+    }
+}
+.flex.flex-gap {
+    gap: 4rem;
+}

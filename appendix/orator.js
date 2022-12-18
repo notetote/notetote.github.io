@@ -1,7 +1,20 @@
-(function() {
+function addScript(key) {
     let script;
     script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "js/fav.min.js";
+    script.setAttribute("type","text/javascript");
+    script.setAttribute("src",key);
     document.body.appendChild(script);
-})();
+}
+
+function addStyle(key) {
+    let style;
+    style = document.createElement("link");
+    style.setAttribute("rel","stylesheet");
+    style.setAttribute("type","text/css");
+    style.setAttribute("href",key);
+    document.head.appendChild(style);
+}
+
+addScript("js/fav.min.js");
+addStyle("css/main.min.css");
+addStyle("css/fontasm.min.css");

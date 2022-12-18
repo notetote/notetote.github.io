@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Fontasm";
+  src: url("../fonts/fontasm-v1.18.woff2") format("woff2"),
+       url("../fonts/fontasm-v1.18.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 1rem "Fontasm";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-notenibba:before {
+  content: "\e000";
+}
+.fa-clear:before {
+  content: "\58";
+}
+.fa-search:before {
+  content: "\53";
+}
+.fa-menu:before {
+  content: "\e001";
+}
+.fa-arrow:before {
+  content: "\e002";
+}
+.fa-all:before {
+  content: "\e003";
+}
+.fa-notes:before {
+  content: "\e004";
+}
+.fa-videos:before {
+  content: "\e005";
+}
+.fa-internal:before {
+  content: "\e006";
+}
+.fa-download:before {
+  content: "\e007";
+}
+.fa-star:before {
+  content: "\e008";
+}
+.fa-load:before {
+  content: "\e009";
+}
+.fa-close:before {
+  content: "\e00A";
+}
+.fa-auto:before {
+  content: "\e00B";
+}
+.fa-day:before {
+  content: "\e00C";
+}
+.fa-night:before {
+  content: "\e00D";
+}
+.fa-arrow-filled:before {
+  content: "\e00E";
+}
