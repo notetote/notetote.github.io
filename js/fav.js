@@ -3,15 +3,15 @@ const colorScheme = window.matchMedia("(prefers-color-scheme: dark)"),
 
 function favSwitch() {
     for (let x = 0; x < linkRel.length; x++) {
-        linkRel[x].href = linkRel[x].href.replace("w.",".").replace("b.",".");
+        linkRel[x].setAttribute("href",linkRel[x].getAttribute("href").replace("w.",".").replace("b.","."));
     }
     if (colorScheme.matches) {
         for (let x = 0; x < linkRel.length; x++) {
-            linkRel[x].href = linkRel[x].href.replace(".","w.");
+            linkRel[x].setAttribute("href",linkRel[x].getAttribute("href").replace(".","w."));
         }
     } else {
         for (let x = 0; x < linkRel.length; x++) {
-            linkRel[x].href = linkRel[x].href.replace(".","b.");
+            linkRel[x].setAttribute("href",linkRel[x].getAttribute("href").replace(".","b."));
         }
     }
 }
