@@ -16,5 +16,3 @@ function addStyle(key) {
 }
 
 addScript("js/fav.min.js");
-addStyle("css/main.min.css");
-addStyle("css/fontasm.min.css");
