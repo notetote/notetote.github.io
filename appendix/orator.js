@@ -1,9 +1,13 @@
-function addScript(key) {
+function addScript(key, where) {
     let script;
     script = document.createElement("script");
     script.setAttribute("type","text/javascript");
     script.setAttribute("src",key);
-    document.body.appendChild(script);
+    if (where === true) {
+        document.head.appendChild(script);
+    } else {
+        document.body.appendChild(script);
+    }
 }
 
 function addStyle(key) {
@@ -15,4 +19,10 @@ function addStyle(key) {
     document.head.appendChild(style);
 }
 
-addScript("js/fav.min.js");
+addScript("js/fav.min.js", true);
+addStyle("css/main.min.css");
+addStyle("css/fontasm.min.css");
+
+window.onload = function() {
+    //add things after page loads;
+}
