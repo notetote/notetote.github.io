@@ -20,9 +20,7 @@ function addStyle(key) {
 }
 
 (async function() {
+    addScript("js/fav.min.js", true);
     addStyle("css/main.min.css");
     addStyle("css/fontasm.min.css");
-    document.head.onload = function() {
-        addScript("js/fav.min.js", true);
-    }
 })();
