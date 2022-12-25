@@ -1,0 +1,1 @@
+document.body = `<content class="flex flex-column"><main class="flex flex-column flex-center-h flex-center-v flex-grow container"></main></content>`;
