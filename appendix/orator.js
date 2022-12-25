@@ -46,13 +46,13 @@ function pathway() {
     if (!localStorage.version || localStorage.version < version) {
         return "path_load.min.js";
     }
-    /*
+
     try {
         fetchThis("/appendix/path_" + path + ".min.js");
     } catch(e) {
         return "path_404.min.js";
     }
-    */
+
     if (path === "") {
         return "path_home.min.js";
     } else {
@@ -83,12 +83,6 @@ function appendectomy() {
     addStyle("css/fontasm.min.css"); // Add icon font
     
     document.addEventListener("DOMContentLoaded",function() {
-        try {
-            inScript(fetchThis("appendix/" + pathway()));
-        } catch(e) {
-            addScript("appendix/path_404.min.js", true);
-            //return "path_404.min.js";
-        }
-        //addScript("appendix/" + pathway(), true);
+        addScript("appendix/" + pathway(), true);
     });
 })();
