@@ -4,8 +4,8 @@ addScript("lib/pako_deflate.min.js", true);
 addScript("lib/localforage.min.js", true);
 
 fetchThis("/json/index.json").then(function(value) {
-    let gotJSON = JSON.parse(value);
-    localStorage.index = JSON.stringify(gotJSON.index);
+    let gotPako = pako.deflate(value);
+    localforage.setItem('index', gotPako);
     localStorage.version = version;
 }).then(function() {
     appendectomy();
