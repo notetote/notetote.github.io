@@ -44,14 +44,14 @@ function pathway() {
         return "path_load.min.js";
     }
 
+    let path = window.location.pathname.replace(/^\//,"");
+
     try {
-        fetch("/appendix/" + pathway());
+        fetch("/appendix/path_" + path + ".min.js");
     } catch(e) {
         return "path_404.min.js";
     }
 
-
-    let path = window.location.pathname.replace(/^\//,"");
     if (path === "") {
         return "path_home.min.js";
     } else {
@@ -74,7 +74,7 @@ function appendectomy() {
     addStyle("css/fontasm.min.css"); // Add icon font
     window.addEventListener("DOMContentLoaded", function() {
         //addScript("lib/pako_deflate.min.js");
-        addScript(pathway());
+        addScript("appendix/" + pathway());
         appendectomy();
     });
 })();
