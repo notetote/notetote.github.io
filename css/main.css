@@ -170,6 +170,11 @@ a {
 .fa.fa-menu:active::before, .fa.fa-close:active::before {
   color: var(--accent-color);
 }
+.fa.splash {
+  -webkit-animation: loading 2s infinite linear;
+          animation: loading 2s infinite linear;
+  font-size: 350%;
+}
 
 content {
   height: 100%;

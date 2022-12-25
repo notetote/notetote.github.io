@@ -165,6 +165,10 @@ a {
             //font-size: .95rem;
         }
     }
+    &.splash {
+        animation: loading 2s infinite linear;
+        font-size: 350%;
+    }
 }
 content {
     height: 100%;
