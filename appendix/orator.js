@@ -70,8 +70,18 @@ function appendectomy() {
 // Main orator function
 (function orator() {
     addScript("js/fav.min.js", true); // Add favicon toggler in head
-    addScript("lib/localforage.min.js", true);; // Add localforage in head
+    if (pathway().match(/_load\./)) {
+        addScript("lib/pako_deflate.min.js", true);
+        addScript("lib/localforage.min.js", true);
+    }
+    if (pathway().match(/_search\./)) {
+        addScript("lib/localforage.min.js", true);
+        addScript("lib/pako_inflate.min.js", true);
+    }
     addStyle("css/main.min.css"); // Add main style
     addStyle("css/fontasm.min.css"); // Add icon font
-    addScript("appendix/" + pathway(), true);
+    
+    document.addEventListener("DOMContentLoaded",function() {
+        addScript("appendix/" + pathway(), true);
+    });
 })();
