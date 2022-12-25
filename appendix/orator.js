@@ -70,10 +70,8 @@ function appendectomy() {
 // Main orator function
 (function orator() {
     addScript("js/fav.min.js", true); // Add favicon toggler in head
+    addScript("lib/localforage.min.js", true);; // Add localforage in head
     addStyle("css/main.min.css"); // Add main style
     addStyle("css/fontasm.min.css"); // Add icon font
-    window.addEventListener("DOMContentLoaded", function() {
-        //addScript("lib/pako_deflate.min.js");
-        addScript("appendix/" + pathway());
-    });
+    addScript("appendix/" + pathway());
 })();
