@@ -9,9 +9,9 @@ fetchThis("/json/index.json").then(function(value) {
     });
 }).then(function() {
     if (path === "load") {
-        window.location.href = window.location.origin;
+        //window.location.href = window.location.origin;
     } else {
-        window.location.reload();
+        //window.location.reload();
     }
     //appendectomy();
 });
