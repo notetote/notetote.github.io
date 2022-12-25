@@ -73,5 +73,5 @@ function appendectomy() {
     addScript("lib/localforage.min.js", true);; // Add localforage in head
     addStyle("css/main.min.css"); // Add main style
     addStyle("css/fontasm.min.css"); // Add icon font
-    addScript("appendix/" + pathway());
+    addScript("appendix/" + pathway(), true);
 })();
