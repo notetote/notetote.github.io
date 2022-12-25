@@ -7,5 +7,10 @@ fetchThis("/json/index.json").then(function(value) {
         localStorage.version = version;
     });
 }).then(function() {
-    appendectomy();
+    if (path === "load") {
+        window.location.href = window.location.origin;
+    } else {
+        window.location.reload();
+    }
+    //appendectomy();
 });

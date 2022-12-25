@@ -1,6 +1,9 @@
 // Version
 const version = 1;
 
+// Path
+const path = window.location.pathname.replace(/\//g,"");
+
 // Function for adding script to head or body
 function addScript(key, where) {
     let script = document.createElement("script");
@@ -43,8 +46,6 @@ function pathway() {
     if (!localStorage.version || localStorage.version < version) {
         return "path_load.min.js";
     }
-
-    let path = window.location.pathname.replace(/\//g,"");
 
     try {
         fetchThis("/appendix/path_" + path + ".min.js");
