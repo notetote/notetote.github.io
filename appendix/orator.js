@@ -46,13 +46,13 @@ function pathway() {
     if (!localStorage.version || localStorage.version < version) {
         return "path_load.min.js";
     }
-
+    /*
     try {
         fetchThis("/appendix/path_" + path + ".min.js");
     } catch(e) {
         return "path_404.min.js";
     }
-
+    */
     if (path === "") {
         return "path_home.min.js";
     } else {
@@ -62,7 +62,7 @@ function pathway() {
 
 // Remove all appendix js from DOM
 function appendectomy() {
-    let appendix = document.querySelectorAll("script[src*='appendix']");
+    let appendix = document.querySelectorAll("script[src*='appendix'],[appendix]");
     for (let x = 0; x < appendix.length; x++) {
         appendix[x].remove();
     }
@@ -83,6 +83,12 @@ function appendectomy() {
     addStyle("css/fontasm.min.css"); // Add icon font
     
     document.addEventListener("DOMContentLoaded",function() {
-        addScript("appendix/" + pathway(), true);
+        try {
+            inScript(fetchThis("appendix/" + pathway()));
+        } catch(e) {
+            addScript("appendix/path_404.min.js", true);
+            //return "path_404.min.js";
+        }
+        //addScript("appendix/" + pathway(), true);
     });
 })();
