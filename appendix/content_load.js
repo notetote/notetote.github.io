@@ -4,7 +4,7 @@ addScript("lib/pako_deflate.min.js", true);
 addScript("lib/localforage.min.js", true);
 
 fetchThis("/json/index.json").then(function(value) {
-    let gotJSON = value.json();
+    let gotJSON = JSON.parse(value);
     localStorage.index = JSON.stringify(gotJSON.index);
     localStorage.version = version;
 }).then(function() {
