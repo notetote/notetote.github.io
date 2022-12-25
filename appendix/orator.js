@@ -32,7 +32,7 @@ function addStyle(key) {
 }
 
 // Fetching data and returning as text
-async function fetch(link) {
+async function fetchThis(link) {
     let url = window.location.origin + link;
     let response = await fetch(url);
     return response.text();
@@ -47,7 +47,7 @@ function pathway() {
     let path = window.location.pathname.replace(/\//g,"");
 
     try {
-        fetch("/appendix/path_" + path + ".min.js");
+        fetchThis("/appendix/path_" + path + ".min.js");
     } catch(e) {
         return "path_404.min.js";
     }

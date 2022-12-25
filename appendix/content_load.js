@@ -3,14 +3,10 @@ addScript("js/splash.min.js");
 addScript("lib/pako_deflate.min.js", true);
 addScript("lib/localforage.min.js", true);
 
-async function storeIndex() {
-    let url = window.location.origin + "/json/index.json",
-        response = await fetch(url),
-        gotJSON = await response.json();
-    
-    localStorage.index = JSON.stringify(gotJSON);
+fetchThis("/json/index.json").then(function(value) {
+    let gotJSON = value.json();
+    localStorage.index = JSON.stringify(gotJSON.index);
     localStorage.version = version;
-}
-storeIndex().then(function(value){
+}).then(function() {
     appendectomy();
 });
