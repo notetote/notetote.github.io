@@ -167,7 +167,9 @@ a {
     }
     &.splash {
         animation: loading 2s infinite linear;
-        font-size: 350%;
+        fill: var(--text-color);
+        width: 100%;
+        max-width: 5rem;
     }
 }
 content {
