@@ -61,14 +61,14 @@ function pathway() {
 
 // Remove all appendix js from DOM
 function appendectomy() {
-    let appendix = document.querySelectorAll("script[src*='appendix'],[appendix]");
+    let appendix = document.querySelectorAll("script[src*='appendix']");
     for (let x = 0; x < appendix.length; x++) {
         appendix[x].remove();
     }
 }
 
 // Main orator function
-(function orator() {
+(async function orator() {
     addScript("js/fav.min.js", true); // Add favicon toggler in head
     addStyle("css/main.min.css"); // Add main style
     addStyle("css/fontasm.min.css"); // Add icon font
