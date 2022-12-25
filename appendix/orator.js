@@ -44,7 +44,7 @@ function pathway() {
         return "path_load.min.js";
     }
 
-    let path = window.location.pathname.replace(/^\//,"");
+    let path = window.location.pathname.replace(/\//g,"");
 
     try {
         fetch("/appendix/path_" + path + ".min.js");
