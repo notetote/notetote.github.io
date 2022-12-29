@@ -26,10 +26,13 @@ function addStyle(key) {
     document.head.appendChild(style);
 }
 
-// When missing local resources
-function crearLocal() {
-    localStorage.clear();
-    window.location.reload();
+// Get local resource
+function localGet(key) {
+    if (!localStorage.getItem(key)) {
+        localStorage.clear();
+        window.location.reload();
+    }
+    return decodeURIComponent(localStorage.getItem(key));
 }
 
 // Fetching data and returning as text
