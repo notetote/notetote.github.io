@@ -1,5 +1,5 @@
-document.querySelector("content").classList.add("flex","flex-column");
-document.querySelector("main").classList.add("flex","flex-column","flex-center-h","flex-center-v","flex-grow","container");
+document.querySelector("content").className = "flex flex-column";
+document.querySelector("main").className = "flex flex-column flex-center-h flex-center-v flex-grow container";
 
 document.querySelector("main").innerHTML = `
 <div class="logo-main margin m2 bottom">
