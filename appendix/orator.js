@@ -26,11 +26,18 @@ function addStyle(key) {
     document.head.appendChild(style);
 }
 
+// When missing local resources
+function crearLocal() {
+    localStorage.clear();
+    window.location.reload();
+}
+
 // Fetching data and returning as text
 async function fetchThis(link) {
-    let url = window.location.origin + link;
-    let response = await fetch(url);
-    return response.text();
+    let url = window.location.origin + link,
+        response = await fetch(url),
+        txt = await response.text();
+    return txt;
 }
 
 // Function for path redirection
