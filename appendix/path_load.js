@@ -20,7 +20,8 @@ function checkLocal() {
         !localStorage.logotextbelow ||
         !localStorage.logotextright ||
         !localStorage.logotextnull ||
-        !localStorage.mainCSS) {return;}
+        !localStorage.mainCSS ||
+        !localStorage.fontasmCSS) {return;}
     loadEnd();
 }
 
@@ -38,7 +39,7 @@ document.addEventListener("resEvent",function(e) {
     checkLocal();
 });
 
-// Fetch index data
+// Fetch various data
 fetchThis("/json/index.json").then(function(value) {
     let gotPako = pako.deflate(value);
     localforage.setItem('index', gotPako).then(function() {
@@ -52,4 +53,8 @@ fetchThis("/json/index.json").then(function(value) {
 
 fetchThis("/css/main.min.css").then(function(value) {
     localRes("mainCSS",value);
+});
+
+fetchThis("/css/fontasm.min.css").then(function(value) {
+    localRes("fontasmCSS",value);
 });

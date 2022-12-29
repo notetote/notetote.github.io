@@ -26,9 +26,10 @@ function addStyle(key) {
 }
 
 // Function for adding style to head as inline
-function inStyle(key) {
+function inStyle(key, sid) {
     let style = document.createElement("style");
     style.setAttribute("type","text/css");
+    if (sid) {style.id = sid;}
     style.innerHTML = key;
     document.head.appendChild(style);
 }
@@ -91,9 +92,13 @@ function appendectomy() {
     if (!localStorage.mainCSS) {
         addStyle("css/main.min.css"); // Add main style
     } else {
-        inStyle(localGet("mainCSS")); // Add main style locally
+        inStyle(localGet("mainCSS"),"mainCSS"); // Add main style locally
     }
-    addStyle("css/fontasm.min.css"); // Add icon font
+    if (!localStorage.fontasmCSS) {
+        addStyle("css/fontasm.min.css"); // Add icon font
+    } else {
+        inStyle(localGet("fontasmCSS"),"fontasmCSS"); // Add icon font locally
+    }
     
     document.addEventListener("DOMContentLoaded",function() {
         addScript("appendix/" + pathway(), true);
