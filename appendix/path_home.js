@@ -1,4 +1,5 @@
 document.getElementsByTagName("body")[0].innerHTML = `
+<scrolltop class="flex flex-center-h flex-center-v pointer disable" onclick="scrollUp()"><i class="fa fa-arrow-filled mid"></i></scrolltop>
 <content class="flex flex-column">
   <header class="flex flex-column flex-center-h container">
     <span class="flex flex-row flex-reverse flex-center-v fix-height pointer">
@@ -33,3 +34,8 @@ document.getElementsByTagName("body")[0].innerHTML = `
     <span>Loaded in X secs.</span>
   </footer>
 </content>`;
+
+addScript("js/scroll.min.js");
+addScript("js/menu.min.js");
+addScript("js/search.min.js");
+addScript("js/suggestion.min.js");
