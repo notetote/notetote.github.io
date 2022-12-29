@@ -57,17 +57,17 @@ function pathway() {
         return "path_load.min.js";
     }
 
+    if (path === "") {
+        return "path_home.min.js";
+    }
+
     try {
         fetchThis("/appendix/path_" + path + ".min.js");
     } catch(e) {
         return "path_404.min.js";
     }
-
-    if (path === "") {
-        return "path_home.min.js";
-    } else {
-        return "path_" + path + ".min.js";
-    }
+    
+    return "path_" + path + ".min.js";
 }
 
 // Remove all appendix js from DOM
