@@ -36,13 +36,15 @@ async function fetchThis(link) {
 // Function for path redirection
 function pathway() {
     if (!localStorage.version || localStorage.version < version || path === "load") {
-        return "path_load.min.js";
+        pathy = "path_load.min.js";
+        return pathy;
     }
 
     try {
         fetchThis("/appendix/path_" + path + ".min.js");
     } catch(e) {
-        return "path_404.min.js";
+        pathy = "path_404.min.js";
+        return pathy;
     }
 
     if (path === "") {
