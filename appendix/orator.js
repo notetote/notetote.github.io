@@ -25,6 +25,14 @@ function addStyle(key) {
     document.head.appendChild(style);
 }
 
+// Function for adding style to head as inline
+function inStyle(key) {
+    let style = document.createElement("style");
+    style.setAttribute("type","text/css");
+    style.innerHTML = key;
+    document.head.appendChild(style);
+}
+
 // Get local resource
 function localGet(key) {
     if (!localStorage.getItem(key)) {
@@ -80,7 +88,11 @@ function appendectomy() {
         addScript("lib/localforage.min.js", true);
         addScript("lib/pako_inflate.min.js", true);
     }
-    addStyle("css/main.min.css"); // Add main style
+    if (!localStorage.mainCSS) {
+        addStyle("css/main.min.css"); // Add main style
+    } else {
+        inStyle(localGet("mainCSS")); // Add main style locally
+    }
     addStyle("css/fontasm.min.css"); // Add icon font
     
     document.addEventListener("DOMContentLoaded",function() {

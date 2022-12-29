@@ -19,7 +19,8 @@ function checkLocal() {
     if (!localStorage.version ||
         !localStorage.logotextbelow ||
         !localStorage.logotextright ||
-        !localStorage.logotextnull) {return;}
+        !localStorage.logotextnull ||
+        !localStorage.mainCSS) {return;}
     loadEnd();
 }
 
@@ -47,4 +48,8 @@ fetchThis("/json/index.json").then(function(value) {
     addScript("appendix/res_logotextbelow.min.js", true);
     addScript("appendix/res_logotextright.min.js", true);
     addScript("appendix/res_logotextnull.min.js", true);
+});
+
+fetchThis("/css/main.min.css").then(function(value) {
+    localRes("mainCSS",value);
 });
