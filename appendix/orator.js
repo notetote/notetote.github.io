@@ -61,13 +61,14 @@ function pathway() {
         return "path_home.min.js";
     }
 
+    let pathy;
+
     try {
         fetchThis("/appendix/path_" + path + ".min.js");
+        return "path_" + path + ".min.js";
     } catch(e) {
         return "path_404.min.js";
     }
-    
-    return "path_" + path + ".min.js";
 }
 
 // Remove all appendix js from DOM
