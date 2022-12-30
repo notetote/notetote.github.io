@@ -81,12 +81,14 @@ function appendectomy() {
 
 // Calculate load time
 function loadTime() {
-    let perf = window.performance.getEntriesByType("navigation")[0],
-        loadTime = perf.loadEventEnd - perf.fetchStart;
+    window.onload = function() {
+        let perf = window.performance.getEntriesByType("navigation")[0],
+            loadTime = perf.loadEventEnd - perf.fetchStart;
 
-    try {
-        document.querySelectorAll("footer span")[1].innerHTML = 'Loaded in ' + (loadTime/1000).toFixed(2) + ' secs';
-    } catch(e) {}
+        try {
+            document.querySelectorAll("footer span")[1].innerHTML = 'Loaded in ' + (loadTime/1000).toFixed(2) + ' secs';
+        } catch(e) {}
+    }
 }
 
 // Main orator function
