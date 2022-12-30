@@ -4,6 +4,9 @@ document.getElementsByClassName("logo-main")[0].innerHTML = localGet("logotextbe
 
 document.getElementsByTagName("scrolltop")[0].outerHTML = localGet("fable_scroll");
 
+document.getElementsByTagName("footer")[0].outerHTML = localGet("fable_footer");
+loadTime();
+
 addScript("js/scroll.min.js");
 addScript("js/menu.min.js");
 addScript("js/search.min.js");

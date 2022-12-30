@@ -79,6 +79,16 @@ function appendectomy() {
     }
 }
 
+// Calculate load time
+function loadTime() {
+    let perf = window.performance.getEntriesByType("navigation")[0],
+        loadTime = perf.loadEventEnd - perf.navigationStart;
+
+    try {
+        document.querySelectorAll("footer span")[1].innerHTML = 'Loaded in ' + (loadTime/1000).toFixed(2) + ' secs';
+    } catch(e) {}
+}
+
 // Main orator function
 (function orator() {
     addScript("js/fav.min.js", true); // Add favicon toggler in head
