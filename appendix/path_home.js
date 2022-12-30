@@ -1,6 +1,6 @@
 document.getElementsByTagName("body")[0].innerHTML = localGet("fable_home");
 
-document.getElementsByClassName(".logo-main").innerHTML = localGet("logotextbelow");
+document.getElementsByClassName(".logo-main")[0].innerHTML = localGet("logotextbelow");
 
 document.getElementsByTagName("scrolltop")[0].outerHTML = localGet("fable_scroll");
 
