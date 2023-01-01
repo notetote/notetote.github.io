@@ -113,4 +113,8 @@ function loadTime() {
     document.addEventListener("DOMContentLoaded",function() {
         addScript("appendix/" + pathway(), true);
     });
+
+    document.addEventListener("readystatechange",function() {
+        loadTime();
+    });
 })();
