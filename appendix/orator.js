@@ -62,8 +62,6 @@ function pathway() {
         return "path_home.min.js";
     }
 
-    let pathy;
-
     try {
         fetchThis("/appendix/path_" + path + ".min.js");
         return "path_" + path + ".min.js";
@@ -86,13 +84,6 @@ function loadTime() {
         let loadExit = parseFloat((Date.now() - loadInit)/1000).toFixed(2);
         document.querySelectorAll("footer span")[1].innerHTML = "In " + loadExit + " seconds";
     } catch(e) {}
-    /*
-    try {
-        let perf = window.performance.getEntriesByType("navigation")[0],
-            loadTime = perf.loadEventEnd - perf.fetchStart;
-        document.querySelectorAll("footer span")[1].innerHTML = "In " + (loadTime/1000).toFixed(2) + " seconds";
-        console.log((loadTime/1000).toFixed(2));
-    } catch(e) {}*/
 }
 
 // Main orator function
@@ -116,8 +107,13 @@ function loadTime() {
     } else {
         inStyle(localGet("fontasmCSS"),"fontasmCSS"); // Add icon font locally
     }
-    
+
     document.addEventListener("DOMContentLoaded",function() {
         addScript("appendix/" + pathway(), true);
+    });
+
+    document.addEventListener("readystatechange",function() {
+        if (document.readyState !== "complete") {return;}
+        loadTime();
     });
 })();
