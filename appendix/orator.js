@@ -80,11 +80,10 @@ function appendectomy() {
 }
 
 // Calculate load time
-function loadTime() {
-    let perf = window.performance.getEntriesByType("navigation")[0],
-        loadTime = perf.loadEventEnd - perf.fetchStart;
-        
+function loadTime() {        
     try {
+        let perf = window.performance.getEntriesByType("navigation")[0],
+            loadTime = perf.loadEventEnd - perf.fetchStart;
         document.querySelectorAll("footer span")[1].innerHTML = "In " + (loadTime/1000).toFixed(2) + " seconds";
     } catch(e) {}
 }
