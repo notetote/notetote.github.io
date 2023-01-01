@@ -83,8 +83,8 @@ function appendectomy() {
 // Calculate load time
 function loadTime() {
     try {
-        parseFloat((Date.now() - loadInit)/1000).toFixed(2);
-        document.querySelectorAll("footer span")[1].innerHTML = "In " + (loadTime/1000).toFixed(2) + " seconds";
+        let loadExit = parseFloat((Date.now() - loadInit)/1000).toFixed(2);
+        document.querySelectorAll("footer span")[1].innerHTML = "In " + loadExit + " seconds";
     } catch(e) {}
     /*
     try {
