@@ -81,15 +81,20 @@ function appendectomy() {
 
 // Calculate load time
 function loadTime() {
-    window.onload = function() {
-        let perf = window.performance.getEntriesByType("navigation")[0],
-            loadTime = perf.loadEventEnd - perf.fetchStart;
+    let perf = window.performance.getEntriesByType("navigation")[0],
+        loadTime = perf.loadEventEnd - perf.fetchStart;
+        
+    try {
+        document.querySelectorAll("footer span")[1].innerHTML = "In " + (loadTime/1000).toFixed(2) + " seconds";
+    } catch(e) {}
+}
 
-        try {
-            document.querySelectorAll("footer span")[1].innerHTML = 'Loaded in ' + (loadTime/1000).toFixed(2) + ' secs';
-        } catch(e) {}
+document.onreadystatechange = function() {
+    if (document.readyState === "complete") {
+        loadTime();
     }
 }
+
 
 // Main orator function
 (function orator() {
