@@ -24,7 +24,9 @@ function checkLocal() {
         !localStorage.fontasmCSS ||
         !localStorage.fable_home ||
         !localStorage.fable_scroll ||
-        !localStorage.fable_footer) {return;}
+        !localStorage.fable_footer ||
+        !localStorage.fable_header ||
+        !localStorage.fable_headerhome) {return;}
     loadEnd();
 }
 
@@ -54,7 +56,8 @@ fetchThis("/json/index.json").then(function(value) {
     addScript("appendix/res_logotextnull.min.js", true);
     addScript("appendix/fable_home.min.js", true);
     addScript("appendix/fable_scroll.min.js", true);
-    addScript("appendix/fable_footer.min.js", true);
+    addScript("appendix/fable_footer.min.js", true)
+    addScript("appendix/fable_header.min.js", true);
 });
 
 fetchThis("/css/main.min.css").then(function(value) {

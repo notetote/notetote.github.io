@@ -4,7 +4,10 @@ document.getElementsByClassName("logo-main")[0].innerHTML = localGet("logotextbe
 
 document.getElementsByTagName("scrolltop")[0].outerHTML = localGet("fable_scroll");
 
+document.getElementsByTagName("header")[0].outerHTML = localGet("fable_headerhome");
+
 document.getElementsByTagName("footer")[0].outerHTML = localGet("fable_footer");
+
 loadTime();
 
 addScript("js/scroll.min.js");
