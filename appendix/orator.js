@@ -88,13 +88,6 @@ function loadTime() {
     } catch(e) {}
 }
 
-document.onreadystatechange = function() {
-    if (document.readyState === "complete") {
-        loadTime();
-    }
-}
-
-
 // Main orator function
 (function orator() {
     addScript("js/fav.min.js", true); // Add favicon toggler in head
