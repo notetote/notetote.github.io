@@ -11,3 +11,5 @@ addScript("js/scroll.min.js");
 addScript("js/menu.min.js");
 addScript("js/search.min.js");
 addScript("js/suggestion.min.js");
+
+appendectomy();

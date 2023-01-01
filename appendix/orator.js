@@ -1,8 +1,9 @@
 // Version
 const version = 1;
 
-// Path
-const path = window.location.pathname.replace(/\//g,"");
+// Path and LoadMS
+const path = window.location.pathname.replace(/\//g,""),
+      loadInit = Date.now();
 
 // Function for adding script to head or body
 function addScript(key, where) {
@@ -80,13 +81,18 @@ function appendectomy() {
 }
 
 // Calculate load time
-function loadTime() {        
+function loadTime() {
+    try {
+        parseFloat((Date.now() - loadInit)/1000).toFixed(2);
+        document.querySelectorAll("footer span")[1].innerHTML = "In " + (loadTime/1000).toFixed(2) + " seconds";
+    } catch(e) {}
+    /*
     try {
         let perf = window.performance.getEntriesByType("navigation")[0],
             loadTime = perf.loadEventEnd - perf.fetchStart;
         document.querySelectorAll("footer span")[1].innerHTML = "In " + (loadTime/1000).toFixed(2) + " seconds";
         console.log((loadTime/1000).toFixed(2));
-    } catch(e) {}
+    } catch(e) {}*/
 }
 
 // Main orator function
@@ -113,9 +119,5 @@ function loadTime() {
     
     document.addEventListener("DOMContentLoaded",function() {
         addScript("appendix/" + pathway(), true);
-    });
-
-    document.addEventListener("readystatechange",function() {
-        loadTime();
     });
 })();
