@@ -2,8 +2,7 @@
 const version = 1;
 
 // Path and LoadMS
-const path = window.location.pathname.replace(/\//g,""),
-      loadInit = Date.now();
+const path = window.location.pathname.replace(/\//g,"");
 
 // Function for adding script to head or body
 function addScript(key, where) {
@@ -72,7 +71,7 @@ function pathway() {
 
 // Remove all appendix js from DOM
 function appendectomy() {
-    let appendix = document.querySelectorAll("script[src*='appendix']");
+    let appendix = document.querySelectorAll("script[src*='appendix'],[appendix]");
     for (let x = 0; x < appendix.length; x++) {
         appendix[x].remove();
     }

@@ -259,31 +259,37 @@ nav {
         }
     }
     sidebar bottom {
-        margin: 1rem 0;
+        margin: .4rem 0 1rem 0;
         padding: 1rem 2rem;
         @media screen and (max-width: 540px) {
             padding: 1rem 1.5rem;
         }
-        row-gap: 1rem;
+        row-gap: 2rem;
         section {
+            row-gap: .5rem;
             lead {
                 display: inline-block;
                 font-size: .9rem;
-                text-align: center;
+                text-align: left;
                 width: 100%;
                 padding: .8rem;
                 background: var(--background);
                 border-radius: $radius;
             }
             btns {
-                margin-top: .5rem;
                 column-gap: .5rem;
             }
             btn {
+                cursor: pointer;
                 text-align: center;
                 padding: .8rem;
                 background: var(--background);
                 border-radius: $radius;
+                transition: flex-grow $globaldelay ease-in-out;
+                &.active {
+                    cursor: default;
+                    flex-grow: 2 !important;
+                }
             }
         }
     }

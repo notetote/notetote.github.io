@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Fontasm";
-  src: url("../fonts/fontasm-v1.18.woff2") format("woff2"),
-       url("../fonts/fontasm-v1.18.woff") format("woff");
+  src: url("../fonts/fontasm-v1.19.woff2") format("woff2"),
+       url("../fonts/fontasm-v1.19.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 }
 
 .fa-notenibba:before {
-  content: "\e000";
+  content: "\E000";
 }
 .fa-clear:before {
   content: "\58";
@@ -25,44 +25,65 @@
   content: "\53";
 }
 .fa-menu:before {
-  content: "\e001";
+  content: "\E001";
 }
 .fa-arrow:before {
-  content: "\e002";
+  content: "\E002";
 }
 .fa-all:before {
-  content: "\e003";
+  content: "\E003";
 }
 .fa-notes:before {
-  content: "\e004";
+  content: "\E004";
 }
 .fa-videos:before {
-  content: "\e005";
+  content: "\E005";
 }
 .fa-internal:before {
-  content: "\e006";
+  content: "\E006";
 }
 .fa-download:before {
-  content: "\e007";
+  content: "\E007";
 }
 .fa-star:before {
-  content: "\e008";
+  content: "\E008";
 }
 .fa-load:before {
-  content: "\e009";
+  content: "\E009";
 }
 .fa-close:before {
-  content: "\e00A";
+  content: "\E00A";
 }
 .fa-auto:before {
-  content: "\e00B";
+  content: "\E00B";
 }
 .fa-day:before {
-  content: "\e00C";
+  content: "\E00C";
 }
 .fa-night:before {
-  content: "\e00D";
+  content: "\E00D";
 }
 .fa-arrow-filled:before {
-  content: "\e00E";
+  content: "\E00E";
+}
+.fa-about:before {
+  content: "\E00F";
+}
+.fa-group:before {
+  content: "\E010";
+}
+.fa-settings:before {
+  content: "\E011";
+}
+.fa-telegram:before {
+  content: "\E012";
+}
+.fa-android:before {
+  content: "\E013";
+}
+.fa-feedback:before {
+  content: "\E014";
+}
+.fa-home:before {
+  content: "\E015";
 }
