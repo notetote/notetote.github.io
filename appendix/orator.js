@@ -30,12 +30,16 @@ function addStyle(key) {
 }
 
 // Function for adding script to body as inline
-function inScript(key, sid) {
+function inScript(key, sid, where) {
     let script = document.createElement("script");
     script.setAttribute("type","text/javascript");
     if (sid) {script.id = sid;}
     script.innerHTML = key;
-    document.body.appendChild(script);
+    if (where) {
+        document.head.appendChild(script);
+    } else {
+        document.body.appendChild(script);
+    }
 }
 
 // Function for adding style to head as inline
@@ -128,7 +132,7 @@ document.addEventListener("keyEvent",function(e) {
     if (!localStorage.favJS) {
         addScript("js/fav.min.js", true); // Add favicon toggler in head
     } else {
-        inScript(localGet("favJS"),"favJS"); // Add favicon toggler locally
+        inScript(localGet("favJS"),"favJS", true); // Add favicon toggler locally
     }
 
     if (pathway().match(/_load\./)) {
@@ -138,12 +142,12 @@ document.addEventListener("keyEvent",function(e) {
         if (!localStorage.localforageLIB) {
             addScript("lib/localforage.min.js", true);
         } else {
-            inScript(localGet("localforageLIB"),"localforageLIB");
+            inScript(localGet("localforageLIB"),"localforageLIB", true);
         }
         if (!localStorage.pako_inflateLIB) {
             addScript("lib/pako_inflate.min.js", true);
         } else {
-            inScript(localGet("pako_inflateLIB"),"pako_inflateLIB");
+            inScript(localGet("pako_inflateLIB"),"pako_inflateLIB", true);
         }
     } else {
         skip = true;
