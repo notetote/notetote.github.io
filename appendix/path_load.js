@@ -14,6 +14,7 @@ function loadEnd() {
     //appendectomy();
 }
 
+/*
 // Function to check completion of local resources
 function checkLocal() {
     if (!localStorage.version ||
@@ -28,6 +29,29 @@ function checkLocal() {
         !localStorage.fable_header ||
         !localStorage.fable_headerhome ||
         !localStorage.fable_nav) {return;}
+    loadEnd();
+}*/
+
+function checkLocal() {
+    const locVal = [
+        "version",
+        "logotextbelow",
+        "logotextright",
+        "logotextnull",
+        "mainCSS",
+        "fontasmCSS",
+        "fable_home",
+        "fable_scroll",
+        "fable_footer",
+        "fable_header",
+        "fable_headerhome",
+        "fable_nav"
+    ];
+
+    for (let x = 0; x < locVal.length; x++) {
+        if (!localStorage.getItem(locVal[x])) {return;}
+    }
+
     loadEnd();
 }
 
