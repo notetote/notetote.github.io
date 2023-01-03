@@ -68,6 +68,8 @@ function makeResults(url) {
     doPrime();
     if (url !== "null") {
         updateURL();
+    } else {
+        sessionStorage.lastURL = window.location.href;
     }
 }
 
