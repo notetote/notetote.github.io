@@ -42,6 +42,11 @@ var badChar = [
 
 function updateURL() {
     let newlink = window.location.href.replace("?s=" + scrapeLink().s,"?s=" + sKey.replace(/\s/g,"+"));
+
+    if (sessionStorage.lastURL && sessionStorage.lastURL == newlink) {return;}
+
+    sessionStorage.lastURL = newlink;
+
     history.pushState({}, '', newlink);
 }
 
