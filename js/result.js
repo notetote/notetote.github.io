@@ -71,7 +71,7 @@ function makeResults(url) {
     }
 }
 
-makeResults();
+makeResults("null");
 
 var sForm = document.querySelector("form.search-box");
 
