@@ -45,7 +45,8 @@ function checkLocal() {
         "fable_footer",
         "fable_header",
         "fable_headerhome",
-        "fable_nav"
+        "fable_nav",
+        "fable_search"
     ];
 
     for (let x = 0; x < locVal.length; x++) {
@@ -84,6 +85,7 @@ fetchThis("/json/index.json").then(function(value) {
     addScript("appendix/fable_footer.min.js", true)
     addScript("appendix/fable_header.min.js", true);
     addScript("appendix/fable_nav.min.js", true);
+    addScript("appendix/fable_search.min.js", true);
 });
 
 fetchThis("/css/main.min.css").then(function(value) {

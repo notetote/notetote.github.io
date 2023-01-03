@@ -2,7 +2,8 @@
 const version = 1;
 
 // Path and LoadMS
-const path = window.location.pathname.replace(/\//g,"");
+const path = window.location.pathname.replace(/\//g,""),
+      earl = "<nav></nav><scrolltop></scrolltop>";
 
 // Function for adding script to head or body
 function addScript(key, where) {
@@ -61,10 +62,13 @@ function pathway() {
         return "path_home.min.js";
     }
 
-    try {
-        fetchThis("/appendix/path_" + path + ".min.js");
+    if (path === "search" && !window.location.search.match(/[\?\&]s=[^\?\&]+/)) {
+        window.location.href = window.location.origin;
+    }
+    
+    if (localStorage.getItem("fable_" + path)) {
         return "path_" + path + ".min.js";
-    } catch(e) {
+    } else {
         return "path_404.min.js";
     }
 }
