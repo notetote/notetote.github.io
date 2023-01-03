@@ -1,5 +1,3 @@
-let indexJSON;
-
 document.getElementsByTagName("body")[0].innerHTML = localGet("fable_search");
 
 document.getElementsByTagName("scrolltop")[0].outerHTML = localGet("fable_scroll");
@@ -16,7 +14,7 @@ document.getElementsByTagName("nav")[0].outerHTML = localGet("fable_nav");
 
 localforage.getItem("index").then(function(event) {
     let txt = new TextDecoder().decode(pako.inflate(event));
-    indexJSON = JSON.parse(txt);
+    window.indexJSON = JSON.parse(txt);
 }).then(function() {
     addScript("js/scroll.min.js");
     addScript("js/menu.min.js");

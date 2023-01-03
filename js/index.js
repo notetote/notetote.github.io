@@ -14,7 +14,7 @@ function getJSON(key) {
     });
 }
 */
-const sObj = indexJSON.index; //getJSON("index").index, // search term = sKey;
+const sObj = window.indexJSON.index; //getJSON("index").index, // search term = sKey;
       primeBox = document.getElementsByTagName("primary")[0];
 
 /*
