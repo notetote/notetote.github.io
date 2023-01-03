@@ -1,9 +1,12 @@
 // Version
 const version = 1;
 
-// Path and LoadMS
+// Path and Early
 const path = window.location.pathname.replace(/\//g,""),
       earl = "<nav></nav><scrolltop></scrolltop>";
+
+// Skip event check or not
+let skip, pakoHere, forageHere;
 
 // Function for adding script to head or body
 function addScript(key, where) {
@@ -89,16 +92,39 @@ function loadTime() {
     } catch(e) {}
 }
 
+// Move forward with loading the pages
+function forward() {
+    if (!pakoHere && !forageHere) {return;}
+
+    addScript("appendix/" + pathway(), true);
+}
+
+// Event creation alongside global variable
+function leadEvent(keyName) {
+    let keyEvent = new CustomEvent("keyEvent", {
+        detail: keyName
+    });
+    document.dispatchEvent(keyEvent);
+}
+
+// Lead event listener
+document.addEventListener("keyEvent",function(e) {
+    if (e.detail === "pako") {pakoHere = true;}
+    if (e.detail === "forage") {forageHere = true;}
+    forward();
+});
+
 // Main orator function
 (function orator() {
     addScript("js/fav.min.js", true); // Add favicon toggler in head
     if (pathway().match(/_load\./)) {
         addScript("lib/pako_deflate.min.js", true);
         addScript("lib/localforage.min.js", true);
-    }
-    if (pathway().match(/_search\./)) {
+    } else if (pathway().match(/_search\./)) {
         addScript("lib/localforage.min.js", true);
         addScript("lib/pako_inflate.min.js", true);
+    } else {
+        skip = true;
     }
 
     if (!localStorage.mainCSS) {
@@ -112,9 +138,11 @@ function loadTime() {
         inStyle(localGet("fontasmCSS"),"fontasmCSS"); // Add icon font locally
     }
 
-    document.addEventListener("load",function() {
-        addScript("appendix/" + pathway(), true);
-    });
+    if (skip) {
+        document.addEventListener("DOMContentLoaded",function() {
+            addScript("appendix/" + pathway(), true);
+        });
+    }
 
     document.addEventListener("readystatechange",function() {
         if (document.readyState !== "complete") {return;}
