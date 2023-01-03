@@ -1,5 +1,6 @@
 // Version
-const version = 1;
+const version = 1,
+      datever = "?20230004054452";
 
 // Path and Early
 const path = window.location.pathname.replace(/\//g,""),
@@ -130,22 +131,22 @@ document.addEventListener("keyEvent",function(e) {
 // Main orator function
 (function orator() {
     if (!localStorage.favJS) {
-        addScript("js/fav.min.js", true); // Add favicon toggler in head
+        addScript("js/fav.min.js"+datever, true); // Add favicon toggler in head
     } else {
         inScript(localGet("favJS"),"favJS", true); // Add favicon toggler locally
     }
 
     if (pathway().match(/_load\./)) {
-        addScript("lib/pako_deflate.min.js", true);
-        addScript("lib/localforage.min.js", true);
+        addScript("lib/pako_deflate.min.js"+datever, true);
+        addScript("lib/localforage.min.js"+datever, true);
     } else if (pathway().match(/_search\./)) {
         if (!localStorage.localforageLIB) {
-            addScript("lib/localforage.min.js", true);
+            addScript("lib/localforage.min.js"+datever, true);
         } else {
             inScript(localGet("localforageLIB"),"localforageLIB", true);
         }
         if (!localStorage.pako_inflateLIB) {
-            addScript("lib/pako_inflate.min.js", true);
+            addScript("lib/pako_inflate.min.js"+datever, true);
         } else {
             inScript(localGet("pako_inflateLIB"),"pako_inflateLIB", true);
         }
@@ -154,19 +155,19 @@ document.addEventListener("keyEvent",function(e) {
     }
 
     if (!localStorage.mainCSS) {
-        addStyle("css/main.min.css"); // Add main style
+        addStyle("css/main.min.css"+datever); // Add main style
     } else {
         inStyle(localGet("mainCSS"),"mainCSS"); // Add main style locally
     }
     if (!localStorage.fontasmCSS) {
-        addStyle("css/fontasm.min.css"); // Add icon font
+        addStyle("css/fontasm.min.css"+datever); // Add icon font
     } else {
         inStyle(localGet("fontasmCSS"),"fontasmCSS"); // Add icon font locally
     }
 
     if (skip) {
         document.addEventListener("DOMContentLoaded",function() {
-            addScript("appendix/" + pathway(), true);
+            addScript("appendix/" + pathway() +datever, true);
         });
     }
 
