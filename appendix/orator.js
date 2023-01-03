@@ -125,13 +125,26 @@ document.addEventListener("keyEvent",function(e) {
 
 // Main orator function
 (function orator() {
-    addScript("js/fav.min.js", true); // Add favicon toggler in head
+    if (!localStorage.favJS) {
+        addScript("js/fav.min.js", true); // Add favicon toggler in head
+    } else {
+        inScript(localGet("favJS"),"favJS"); // Add favicon toggler locally
+    }
+
     if (pathway().match(/_load\./)) {
         addScript("lib/pako_deflate.min.js", true);
         addScript("lib/localforage.min.js", true);
     } else if (pathway().match(/_search\./)) {
-        addScript("lib/localforage.min.js", true);
-        addScript("lib/pako_inflate.min.js", true);
+        if (!localStorage.localforageLIB) {
+            addScript("lib/localforage.min.js", true);
+        } else {
+            inScript(localGet("localforageLIB"),"localforageLIB");
+        }
+        if (!localStorage.pako_inflateLIB) {
+            addScript("lib/pako_inflate.min.js", true);
+        } else {
+            inScript(localGet("pako_inflateLIB"),"pako_inflateLIB");
+        }
     } else {
         skip = true;
     }

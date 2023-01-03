@@ -55,7 +55,9 @@ function checkLocal() {
         "fable_header",
         "fable_headerhome",
         "fable_nav",
-        "fable_search"
+        "fable_search",
+        "localforageLIB",
+        "pako_inflateLIB"
     ];
 
     for (let x = 0; x < locVal.length; x++) {
@@ -98,9 +100,10 @@ fetchThis("/json/index.json").then(function(value) {
 });
 
 // One fetch function for all js and css
-function fetchRest(type, key) {
-    fetchThis(`/${type}/${key}.min.${type}`).then(function(value) {
-        localRes(key + type.toUpperCase(),value);
+function fetchRest(type, key, folder) {
+    if (!folder) {folder = type;}
+    fetchThis(`/${folder}/${key}.min.${type}`).then(function(value) {
+        localRes(key + folder.toUpperCase(),value);
     });
 }
 
@@ -115,3 +118,5 @@ fetchRest("js","scroll");
 fetchRest("js","search");
 fetchRest("js","suggestion");
 fetchRest("js","switch");
+fetchRest("js","localforage","lib");
+fetchRest("js","pako_inflate","lib");
