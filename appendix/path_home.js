@@ -12,17 +12,6 @@ document.getElementsByTagName("nav")[0].outerHTML = localGet("fable_nav");
 
 document.querySelector("nav a[href='/']").classList.add("active");
 
-let suggestThese = ["Hamlet","Macbeth"];
-
-function nowSuggest(key) {
-    let suggestHere = document.getElementsByClassName("search-suggest")[0];
-    for (let x = 0; x < key.length; x++) {
-        suggestHere.innerHTML = suggestHere.innerHTML + `<a onclick="quickSearch(this)">${key[x]}</a>`;
-    }
-}
-
-nowSuggest(suggestThese);
-
 addScript("js/scroll.min.js");
 addScript("js/menu.min.js");
 addScript("js/search.min.js");
