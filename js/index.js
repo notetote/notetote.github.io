@@ -4,17 +4,17 @@ function setJSON(key, data) {
     localStorage.setItem(key, data);
 }
 */
-
+/*
 function getJSON(key) {
     //return JSON.parse(localStorage.getItem(key));
 
-    localforage.getItem("index").then(function(event) {
+    localforage.getItem(key).then(function(event) {
         let txt = new TextDecoder().decode(pako.inflate(event));
         return JSON.parse(txt);
     });
 }
-
-const sObj = getJSON("index").index, // search term = sKey;
+*/
+const sObj = indexJSON.index; //getJSON("index").index, // search term = sKey;
       primeBox = document.getElementsByTagName("primary")[0];
 
 /*
