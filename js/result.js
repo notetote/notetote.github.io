@@ -47,7 +47,7 @@ function updateURL() {
 
     sessionStorage.lastURL = newlink;
 
-    history.pushState({}, '', newlink);
+    history.pushState({}, document.title, newlink);
 }
 
 function makeResults(url) {
@@ -56,10 +56,10 @@ function makeResults(url) {
             sKey = sKey.replace(badChar[y],"");
         }
     }
-    
-    sBox.value = sKey;
+
+    sBox.value = sKey.replace("dQw4w9WgXcQ","");
     document.title = sKey + " at NoteNibba";
-    
+
     if (sKey == "") {
         sKey = "dQw4w9WgXcQ";
         document.title = "Search at NoteNibba";
