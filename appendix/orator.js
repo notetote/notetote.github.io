@@ -100,6 +100,7 @@ function loadTime() {
         addScript("lib/localforage.min.js", true);
         addScript("lib/pako_inflate.min.js", true);
     }
+
     if (!localStorage.mainCSS) {
         addStyle("css/main.min.css"); // Add main style
     } else {
@@ -111,7 +112,7 @@ function loadTime() {
         inStyle(localGet("fontasmCSS"),"fontasmCSS"); // Add icon font locally
     }
 
-    document.addEventListener("DOMContentLoaded",function() {
+    document.addEventListener("load",function() {
         addScript("appendix/" + pathway(), true);
     });
 
