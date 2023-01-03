@@ -272,11 +272,6 @@ nav sidebar top {
     padding: 1rem 1.5rem 0 1.5rem;
   }
 }
-@media screen and (min-width: 541px) {
-  nav sidebar top .flex-row.flex-responsive {
-    flex-direction: row-reverse;
-  }
-}
 nav sidebar bottom {
   margin: 0.4rem 0 1rem 0;
   padding: 1rem 2rem;
@@ -376,7 +371,7 @@ header top.flex {
 }
 @media screen and (max-width: 540px) {
   header top.flex {
-    display: inherit;
+    display: flex;
   }
   header .slim {
     display: none;
@@ -723,6 +718,11 @@ titlecard {
 }
 .flex .flex-grow {
   flex: 1 0 auto;
+}
+@media screen and (min-width: 541px) {
+  .flex .flex-row.flex-responsive {
+    flex-direction: row-reverse;
+  }
 }
 
 .search-box {
