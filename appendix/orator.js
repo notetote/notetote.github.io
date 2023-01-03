@@ -1,6 +1,6 @@
 // Version
-const version = 1,
-      datever = "?20230004054452";
+const version = 20230004055033,
+      datever = "?" + version;
 
 // Path and Early
 const path = window.location.pathname.replace(/\//g,""),
@@ -110,7 +110,7 @@ function loadTime() {
 function forward() {
     if (!pakoHere && !forageHere) {return;}
 
-    addScript("appendix/" + pathway(), true);
+    addScript("appendix/" + pathway() +datever, true);
 }
 
 // Event creation alongside global variable
