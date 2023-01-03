@@ -29,6 +29,15 @@ function addStyle(key) {
     document.head.appendChild(style);
 }
 
+// Function for adding script to body as inline
+function inScript(key, sid) {
+    let script = document.createElement("script");
+    script.setAttribute("type","text/javascript");
+    if (sid) {script.id = sid;}
+    script.innerHTML = key;
+    document.body.appendChild(script);
+}
+
 // Function for adding style to head as inline
 function inStyle(key, sid) {
     let style = document.createElement("style");

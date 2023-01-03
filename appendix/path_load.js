@@ -40,6 +40,15 @@ function checkLocal() {
         "logotextnull",
         "mainCSS",
         "fontasmCSS",
+        "favJS",
+        "filterJS",
+        "indexJS",
+        "menuJS",
+        "resultJS",
+        "scrollJS",
+        "searchJS",
+        "suggestionJS",
+        "switchJS",
         "fable_home",
         "fable_scroll",
         "fable_footer",
@@ -88,10 +97,21 @@ fetchThis("/json/index.json").then(function(value) {
     addScript("appendix/fable_search.min.js", true);
 });
 
-fetchThis("/css/main.min.css").then(function(value) {
-    localRes("mainCSS",value);
-});
+// One fetch function for all js and css
+function fetchRest(type, key) {
+    fetchThis(`/${type}/${key}.min.${type}`).then(function(value) {
+        localRes(key + type.toUpperCase(),value);
+    });
+}
 
-fetchThis("/css/fontasm.min.css").then(function(value) {
-    localRes("fontasmCSS",value);
-});
+fetchRest("css","main");
+fetchRest("css","fontasm");
+fetchRest("js","fav");
+fetchRest("js","filter");
+fetchRest("js","index");
+fetchRest("js","menu");
+fetchRest("js","result");
+fetchRest("js","scroll");
+fetchRest("js","search");
+fetchRest("js","suggestion");
+fetchRest("js","switch");

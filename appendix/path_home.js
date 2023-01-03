@@ -12,10 +12,18 @@ document.getElementsByTagName("nav")[0].outerHTML = localGet("fable_nav");
 
 document.querySelector("nav a[href='/']").classList.add("active");
 
+/*
 addScript("js/scroll.min.js");
 addScript("js/menu.min.js");
 addScript("js/search.min.js");
 addScript("js/suggestion.min.js");
+*/
+
+inScript(localGet("scrollJS") +
+         localGet("menuJS") +
+         localGet("searchJS") +
+         localGet("suggestionJS")
+,"oneJS");
 
 loadTime();
 appendectomy();

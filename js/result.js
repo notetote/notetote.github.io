@@ -14,7 +14,7 @@ function getKey() {
 
 getKey();
 
-const badChar = [
+var badChar = [
     "^",
     "$",
     ".",
@@ -52,7 +52,7 @@ function makeResults(url) {
         }
     }
     
-    document.querySelector(".search-box input[type='text']").value = sKey;
+    sBox.value = sKey;
     document.title = sKey + " at NoteNibba";
     
     if (sKey == "") {
@@ -72,7 +72,7 @@ var sForm = document.querySelector("form.search-box");
 
 sForm.addEventListener("submit", function(event) {
     event.preventDefault();
-    sKey = document.querySelector(".search-box input[type='text']").value;
+    sKey = sBox.value;
     focusPrimary();
     makeResults();
 });

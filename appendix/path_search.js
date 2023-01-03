@@ -16,6 +16,7 @@ localforage.getItem("index").then(function(event) {
     let txt = new TextDecoder().decode(pako.inflate(event));
     window.indexJSON = JSON.parse(txt);
 }).then(function() {
+    /*
     addScript("js/scroll.min.js");
     addScript("js/menu.min.js");
     addScript("js/index.min.js");
@@ -23,6 +24,16 @@ localforage.getItem("index").then(function(event) {
     addScript("js/result.min.js");
     addScript("js/filter.min.js");
     addScript("js/switch.min.js");
+    */
+
+    inScript(localGet("scrollJS") + 
+             localGet("menuJS") +
+             localGet("indexJS") +
+             localGet("searchJS") +
+             localGet("resultJS") + 
+             localGet("filterJS") +
+             localGet("switchJS")
+    ,"oneJS");
     
     loadTime();
     appendectomy();
