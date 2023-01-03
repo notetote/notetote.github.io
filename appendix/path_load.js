@@ -26,7 +26,8 @@ function checkLocal() {
         !localStorage.fable_scroll ||
         !localStorage.fable_footer ||
         !localStorage.fable_header ||
-        !localStorage.fable_headerhome) {return;}
+        !localStorage.fable_headerhome ||
+        !localStorage.fable_nav) {return;}
     loadEnd();
 }
 
@@ -58,6 +59,7 @@ fetchThis("/json/index.json").then(function(value) {
     addScript("appendix/fable_scroll.min.js", true);
     addScript("appendix/fable_footer.min.js", true)
     addScript("appendix/fable_header.min.js", true);
+    addScript("appendix/fable_nav.min.js", true);
 });
 
 fetchThis("/css/main.min.css").then(function(value) {

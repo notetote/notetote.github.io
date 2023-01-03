@@ -4,6 +4,7 @@ $resultsFg: 65%;
 $resultsBg: 35%;
 $globaldelay: .1s;
 $minimizedelay: .2s;
+$btnopacity: .9;
 
 @mixin searchBoxHome() {
     width: 32rem;
@@ -266,29 +267,68 @@ nav {
         }
         row-gap: 2rem;
         section {
-            row-gap: .5rem;
-            lead {
-                display: inline-block;
+            gap: .5rem;
+            i.fa, span {
+                opacity: $btnopacity;
+            }
+            a {
+                column-gap: 1rem;
+                cursor: pointer;
                 font-size: .9rem;
                 text-align: left;
                 width: 100%;
-                padding: .8rem;
+                padding: .8rem 1rem;
                 background: var(--background);
+                border: 1px solid transparent;
                 border-radius: $radius;
-            }
-            btns {
-                column-gap: .5rem;
+                &:hover, &:focus {
+                    background: var(--hover-bg);
+                    border-color: var(--results-border);
+                    i.fa, span {
+                        opacity: 1;
+                    }
+                }
+                &:active {
+                    color: var(--accent-color);
+                    transform: translateY(.2rem);
+                }
+                &.active {
+                    cursor: default;
+                    color: var(--active-fg);
+                    background: var(--active-bg);
+                    transform: translateY(0);
+                    flex-grow: 2 !important;
+                    i.fa, span {
+                        opacity: 1;
+                    }
+                }
             }
             btn {
                 cursor: pointer;
                 text-align: center;
-                padding: .8rem;
+                padding: .8rem 1rem;
                 background: var(--background);
                 border-radius: $radius;
-                transition: flex-grow $globaldelay ease-in-out;
+                &:hover, &:focus {
+                    background: var(--hover-bg);
+                    border-color: var(--results-border);
+                    i.fa, span {
+                        opacity: 1;
+                    }
+                }
+                &:active {
+                    color: var(--accent-color);
+                    transform: scale(.9);
+                }
                 &.active {
                     cursor: default;
+                    color: var(--active-fg);
+                    background: var(--active-bg);
+                    transform: scale(1);
                     flex-grow: 2 !important;
+                    i.fa, span {
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -388,7 +428,7 @@ main primary {
             font-size: .9rem;
         }
         info {
-            opacity: .85;
+            opacity: $btnopacity;
             padding: 1rem;
             row-gap: .2rem;
         }
@@ -456,7 +496,7 @@ main secondary {
             border-radius: $radius;
             cursor: pointer;
             i.fa {
-                opacity: .85;
+                opacity: $btnopacity;
             }
             &:hover, &:focus {
                 color: var(--text-color);
@@ -468,13 +508,13 @@ main secondary {
             }
             &:active {
                 color: var(--accent-color);
-                scale: .9;
+                transform: scale(.9);
             }
             &.active {
                 color: var(--active-fg);
                 background: var(--active-bg);
                 border-color: var(--results-border);
-                scale: 1;
+                transform: scale(1);
                 cursor: default;
                 i.fa {
                     opacity: 1;
@@ -515,7 +555,7 @@ main secondary {
             font-size: .7rem;
         }
         info {
-            opacity: .85;
+            opacity: $btnopacity;
             padding: 1rem;
             row-gap: .2rem;
         }
@@ -676,7 +716,7 @@ titlecard {
         }
         &:active {
             color: var(--accent-color);
-            transform: translateY(2px);
+            transform: translateY(.2rem);
         }
     }
 }

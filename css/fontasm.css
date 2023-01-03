@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Fontasm";
-  src: url("../fonts/fontasm-v1.19.woff2") format("woff2"),
-       url("../fonts/fontasm-v1.19.woff") format("woff");
+  src: url("../fonts/fontasm.woff2?20230003094535") format("woff2"),
+       url("../fonts/fontasm.woff?20230003094535") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -78,7 +78,7 @@
 .fa-telegram:before {
   content: "\E012";
 }
-.fa-android:before {
+.fa-download-filled:before {
   content: "\E013";
 }
 .fa-feedback:before {

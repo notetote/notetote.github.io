@@ -8,6 +8,10 @@ document.getElementsByTagName("header")[0].outerHTML = localGet("fable_headerhom
 
 document.getElementsByTagName("footer")[0].outerHTML = localGet("fable_footer");
 
+document.getElementsByTagName("nav")[0].outerHTML = localGet("fable_nav");
+
+document.querySelector("nav a[href='/']").classList.add("active");
+
 loadTime();
 
 addScript("js/scroll.min.js");
