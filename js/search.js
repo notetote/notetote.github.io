@@ -1,4 +1,4 @@
-sessionStorage.clear();
+sessionStorage.removeItem("primeNow");
 
 var sBox = document.querySelector(".search-box input[type='text']"),
     sFind = document.querySelector(".search-box input[type='submit']"),
