@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230004074507,
+const version = 20230004075324,
       datever = "?" + version.toString();
 
 // Path and Early
@@ -52,11 +52,16 @@ function inStyle(key, sid) {
     document.head.appendChild(style);
 }
 
+// Clear load
+function clearLoad() {
+    localStorage.clear();
+    window.location.reload();
+}
+
 // Get local resource
 function localGet(key) {
     if (!localStorage.getItem(key)) {
-        localStorage.clear();
-        window.location.reload();
+        clearLoad();
     }
     return decodeURIComponent(localStorage.getItem(key));
 }
