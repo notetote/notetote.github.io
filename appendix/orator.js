@@ -98,12 +98,21 @@ function appendectomy() {
     }
 }
 
+// Push version inside nav
+function navVer() {
+    try {
+        let verSpan = document.querySelector("nav span.version");
+        verSpan.innerHTML = "v" + version.toString();
+    } catch(e) {}
+}
+
 // Calculate load time
 function loadTime() {
     try {
         let loadExit = parseFloat((Date.now() - loadInit)/1000).toFixed(2);
         document.querySelectorAll("footer span")[1].innerHTML = "In " + loadExit + " seconds";
     } catch(e) {}
+    navVer(); // So that both happen together
 }
 
 // Move forward with loading the pages

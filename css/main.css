@@ -267,6 +267,13 @@ nav sidebar top {
       font-weight: 600;
   }*/
 }
+nav sidebar top .version {
+  font-size: 0.6rem;
+  font-weight: 300;
+  color: var(--text-color);
+  opacity: 0.25;
+  padding-top: 0.6rem;
+}
 @media screen and (max-width: 540px) {
   nav sidebar top {
     padding: 1rem 1.5rem 0 1.5rem;
