@@ -88,21 +88,21 @@ fetchThis("/json/index.json"+datever).then(function(value) {
         localStorage.version = version;
     });
 }).then(function() {
-    addScript("appendix/res_logotextbelow.min.js", true);
-    addScript("appendix/res_logotextright.min.js", true);
-    addScript("appendix/res_logotextnull.min.js", true);
-    addScript("appendix/fable_home.min.js", true);
-    addScript("appendix/fable_scroll.min.js", true);
-    addScript("appendix/fable_footer.min.js", true)
-    addScript("appendix/fable_header.min.js", true);
-    addScript("appendix/fable_nav.min.js", true);
-    addScript("appendix/fable_search.min.js", true);
+    addScript("appendix/res_logotextbelow.min.js"+datever, true);
+    addScript("appendix/res_logotextright.min.js"+datever, true);
+    addScript("appendix/res_logotextnull.min.js"+datever, true);
+    addScript("appendix/fable_home.min.js"+datever, true);
+    addScript("appendix/fable_scroll.min.js"+datever, true);
+    addScript("appendix/fable_footer.min.js"+datever, true)
+    addScript("appendix/fable_header.min.js"+datever, true);
+    addScript("appendix/fable_nav.min.js"+datever, true);
+    addScript("appendix/fable_search.min.js"+datever, true);
 });
 
 // One fetch function for all js and css
 function fetchRest(type, key, folder) {
     if (!folder) {folder = type;}
-    fetchThis(`/${folder}/${key}.min.${type}`).then(function(value) {
+    fetchThis(`/${folder}/${key}.min.${type}`+datever).then(function(value) {
         localRes(key + folder.toUpperCase(),value);
     });
 }
