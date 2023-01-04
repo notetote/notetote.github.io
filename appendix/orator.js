@@ -1,6 +1,6 @@
 // Version
 const version = 20230004055548,
-      datever = "?" + version;
+      datever = "?" + version.toString();
 
 // Path and Early
 const path = window.location.pathname.replace(/\//g,""),
