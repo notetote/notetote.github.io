@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230004075324,
+const version = 20230004080022,
       datever = "?" + version.toString();
 
 // Path and Early
@@ -124,7 +124,7 @@ function loadTime() {
 function forward() {
     if (!pakoHere && !forageHere) {return;}
 
-    addScript("appendix/" + pathway() , true);
+    addScript("appendix/" + pathway(), true);
 }
 
 // Event creation alongside global variable
@@ -181,7 +181,7 @@ document.addEventListener("keyEvent",function(e) {
 
     if (skip) {
         document.addEventListener("DOMContentLoaded",function() {
-            addScript("appendix/" + pathway() , true);
+            addScript("appendix/" + pathway(), true);
         });
     }
 
