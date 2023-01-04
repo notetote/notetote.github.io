@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230004231418,
+const version = 20230004234654,
       datever = "?" + version.toString();
 
 // Path and Early
@@ -7,7 +7,7 @@ const path = window.location.pathname.replace(/\//g,""),
       earl = "<nav></nav><scrolltop></scrolltop>";
 
 // Skip event check or not
-let skip, pakoHere, forageHere;
+let skip = false, pakoHere = false, forageHere = false;
 
 // Function for adding script to head or body
 function addScript(key, where) {
@@ -182,11 +182,10 @@ document.addEventListener("keyEvent",function(e) {
         }
     }
 
-    if (skip) {
-        document.addEventListener("DOMContentLoaded",function() {
-            addScript("appendix/" + pathway(), true);
-        });
-    }
+    document.addEventListener("DOMContentLoaded",function() {
+        if (skip !== true) {return;}
+        addScript("appendix/" + pathway(), true);
+    });
 
     document.addEventListener("readystatechange",function() {
         if (document.readyState !== "complete") {return;}

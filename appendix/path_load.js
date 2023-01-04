@@ -9,8 +9,6 @@ const loadingIcon = '<svg class="fa splash margin bottom m2" xmlns="http://www.w
 
 document.querySelector("main").innerHTML = loadingIcon + '<span class="flex flex-row flex-center-h flex-center-v"><span class="dots margin right m0">.</span><span>updating database</span><span class="dots margin left m0">.</span></span>';
 
-if (!pathLoadOnce) {pathLoadInner();}
-
 addScript("js/splash.min.js");
 
 // Function for load completion
