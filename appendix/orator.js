@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230004080022,
+const version = 20230004231418,
       datever = "?" + version.toString();
 
 // Path and Early
@@ -55,13 +55,13 @@ function inStyle(key, sid) {
 // Clear load
 function clearLoad() {
     localStorage.clear();
-    window.location.reload();
 }
 
 // Get local resource
 function localGet(key) {
     if (!localStorage.getItem(key)) {
         clearLoad();
+        window.location.reload();
     }
     return decodeURIComponent(localStorage.getItem(key));
 }
@@ -173,10 +173,13 @@ document.addEventListener("keyEvent",function(e) {
     } else {
         inStyle(localGet("mainCSS"),"mainCSS"); // Add main style locally
     }
-    if (!localStorage.fontasmCSS) {
-        addStyle("css/fontasm.min.css"); // Add icon font
-    } else {
-        inStyle(localGet("fontasmCSS"),"fontasmCSS"); // Add icon font locally
+
+    if (!pathway().match(/_load\./)) { // Don't load fontasm in the loading page
+        if (!localStorage.fontasmCSS) {
+            addStyle("css/fontasm.min.css"); // Add icon font
+        } else {
+            inStyle(localGet("fontasmCSS"),"fontasmCSS"); // Add icon font locally
+        }
     }
 
     if (skip) {
