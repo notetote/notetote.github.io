@@ -1,6 +1,5 @@
-// Version
-const version = 20230004062809,
-      datever = "?" + version.toString();
+// Version Extension
+const datever = "?" + version.toString();
 
 // Path and Early
 const path = window.location.pathname.replace(/\//g,""),
