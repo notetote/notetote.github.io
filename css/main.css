@@ -209,23 +209,12 @@ scrolltop.disable {
   z-index: -1;
 }
 
-load, nav, backdrop {
+nav, backdrop {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-}
-
-load {
-  background: var(--background);
-  z-index: 3;
-}
-load i.fa {
-  font-size: 6rem;
-  color: var(--text-color);
-  -webkit-animation: loading 2s infinite linear;
-          animation: loading 2s infinite linear;
 }
 
 nav {
@@ -393,6 +382,13 @@ footer {
   font-size: 0.8rem;
 }
 
+main.load {
+  row-gap: 2.5rem;
+}
+main.load > span {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
 main.results {
   background: var(--results-background);
   border-top: 1px solid var(--results-border);

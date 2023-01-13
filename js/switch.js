@@ -107,7 +107,7 @@ function secondList(list) {
     const e1 = `" onclick="`,
           e2 = `filter('`,
           e3 = `<tog class="`,
-          e4 = `<tog${e1.replace(/\" /," ")}`,
+          e4 = `<tog onclick="`,
           e5 = `',this)">`,
           e6 = `<i class="fa fa-`,
           e7 = ` big"></i></tog>`;

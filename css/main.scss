@@ -173,6 +173,7 @@ a {
         max-width: 5rem;
     }
 }
+
 content {
     height: 100%;
     width: 100%;
@@ -200,21 +201,12 @@ scrolltop {
         z-index: -1;
     }
 }
-load, nav, backdrop {
+nav, backdrop {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-}
-load {
-    background: var(--background);
-    z-index: 3;
-    i.fa {
-        font-size: 6rem;
-        color: var(--text-color);
-        animation: loading 2s infinite linear;
-    }
 }
 nav {
     background: transparent;
@@ -370,6 +362,12 @@ footer {
     font-size: .8rem;
 }
 main {
+    &.load {
+        row-gap: 2.5rem;
+        > span {
+            column-gap: .5rem;
+        }
+    }
     &.results {
         background: var(--results-background);
         border-top: 1px solid var(--results-border);
@@ -620,10 +618,6 @@ titlecard {
     }
 }
 .flex {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
     &.flex-center-v {
         align-items: center;

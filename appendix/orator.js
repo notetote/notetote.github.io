@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230004234654,
+const version = 20230013181810,
       datever = "?" + version.toString();
 
 // Path and Early
@@ -124,7 +124,7 @@ function loadTime() {
 function forward() {
     if (!pakoHere && !forageHere) {return;}
 
-    addScript("appendix/" + pathway(), true);
+    addScript("appendix/" + pathway()+datever, true);
 }
 
 // Event creation alongside global variable
@@ -168,23 +168,14 @@ document.addEventListener("keyEvent",function(e) {
         skip = true;
     }
 
-    if (!localStorage.mainCSS) {
-        addStyle("css/main.min.css"); // Add main style
-    } else {
-        inStyle(localGet("mainCSS"),"mainCSS"); // Add main style locally
-    }
-
-    if (!pathway().match(/_load\./)) { // Don't load fontasm in the loading page
-        if (!localStorage.fontasmCSS) {
-            addStyle("css/fontasm.min.css"); // Add icon font
-        } else {
-            inStyle(localGet("fontasmCSS"),"fontasmCSS"); // Add icon font locally
-        }
+    if (!pathway().match(/_load\./)) { // Don't load fontasm and main CSS in the loading page
+        inStyle(localGet("mainCSS"),"mainCSS");
+        inStyle(localGet("fontasmCSS"),"fontasmCSS");
     }
 
     document.addEventListener("DOMContentLoaded",function() {
         if (skip !== true) {return;}
-        addScript("appendix/" + pathway(), true);
+        addScript("appendix/" + pathway()+datever, true);
     });
 
     document.addEventListener("readystatechange",function() {
