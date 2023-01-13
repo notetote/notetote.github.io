@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230013181810,
+const version = 20230013182844,
       datever = "?" + version.toString();
 
 // Path and Early
@@ -77,6 +77,7 @@ async function fetchThis(link) {
 // Function for path redirection
 function pathway() {
     if (!localStorage.version || parseFloat(localStorage.version) < version || path === "load") {
+        clearLoad();
         return "path_load.min.js";
     }
 
