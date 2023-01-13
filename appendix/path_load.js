@@ -16,8 +16,9 @@ addScript("js/splash.min.js");
 function loadEnd() {
     if (path === "load") {
         window.location.href = window.location.origin;
+    } else {
+        window.location.reload();
     }
-    window.location.reload();
     //appendectomy();
 }
 
