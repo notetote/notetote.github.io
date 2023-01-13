@@ -107,7 +107,7 @@ function secondList(list) {
     const e1 = `" onclick="`,
           e2 = `filter('`,
           e3 = `<tog class="`,
-          e4 = `<tog ${e1}`,
+          e4 = `<tog${e1.replace(/\" /," ")}`,
           e5 = `',this)">`,
           e6 = `<i class="fa fa-`,
           e7 = ` big"></i></tog>`;
@@ -120,21 +120,21 @@ function secondList(list) {
             sClass = ` fi-star`;
             sPanel = `<panel class="flex flex-row flex-center-h flex-center-v"><i class="fa fa-star mid"></i></panel>`;
         }
-        echo(`<a href="${url}" target="_blank" class="flex flex-row flex-center-v ${type}${sClass}"><info class="flex flex-column full-width"><name class="text-trim">${txt}</name><dest class="text-trim">${url}</dest></info>${sPanel}</a>`);
+        echo(`<a href="${url}" target="_blank" class="flex flex-row flex-center-v ${type+sClass}"><info class="flex flex-column full-width"><name class="text-trim">${txt}</name><dest class="text-trim">${url}</dest></info>${sPanel}</a>`);
     }
 
     echo(`${v1}star`);
     echo(`${v2}Starred`);
     echo(`${v3}star`);
     echo(`${v4}`);
-    echo2(`${e3}active${e1}${e2}clear${e5}${e6}all${e7}`);
+    echo2(`${e3}active${e1+e2}clear${e5+e6}all${e7}`); // <tog class="active" onclick="filter('clear',this)"><i class="fa fa-all big"></i></tog>
 
     if (vNote.length > 0) {
         echo(`${v1}note`);
         echo(`${v2}Notes`);
         echo(`${v3}notes`);
         echo(`${v4}`);
-        echo2(`${e4}${e2}fi-note${e5}${e6}notes${e7}`);
+        echo2(`${e4+e2}fi-note${e5+e6}notes${e7}`); // <tog" onclick="filter('
         for (let x = 0; x < vNote.length; x++) {
             linkSet(vNote[x].txt,vNote[x].url,vNote[x].hit,"fi-note");
         }
@@ -145,7 +145,7 @@ function secondList(list) {
         echo(`${v2}Videos`);
         echo(`${v3}videos`);
         echo(`${v4}`);
-        echo2(`${e4}${e2}fi-vid${e5}${e6}videos${e7}`);
+        echo2(`${e4+e2}fi-vid${e5+e6}videos${e7}`);
         for (let x = 0; x < vVid.length; x++) {
             linkSet(vVid[x].txt,vVid[x].url,vVid[x].hit,"fi-vid");
         }
@@ -156,7 +156,7 @@ function secondList(list) {
         echo(`${v2}Submissions`);
         echo(`${v3}internal`);
         echo(`${v4}`);
-        echo2(`${e4}${e2}fi-sub${e5}${e6}internal${e7}`);
+        echo2(`${e4+e2}fi-sub${e5+e6}internal${e7}`);
         for (let x = 0; x < vSub.length; x++) {
             linkSet(vSub[x].txt,vSub[x].url,vSub[x].hit,"fi-sub");
         }
@@ -167,14 +167,14 @@ function secondList(list) {
         echo(`${v2}Downloads`);
         echo(`${v3}download`);
         echo(`${v4}`);
-        echo2(`${e4}${e2}fi-down${e5}${e6}download${e7}`);
+        echo2(`${e4+e2}fi-down${e5+e6}download${e7}`);
         for (let x = 0; x < vDown.length; x++) {
             linkSet(vDown[x].txt,vDown[x].url,vDown[x].hit,"fi-down");
         }
     }
 
     if (hitCount > 0) {
-        echo2(`${e4}${e2}fi-star${e5}${e6}star${e7}`);
+        echo2(`${e4+e2}fi-star${e5+e6}star${e7}`);
     }
 
     echo2(`${e3}round${e1}focusPrimary()">${e6}arrow${e7}`);
