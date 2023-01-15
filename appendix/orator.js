@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230015132039,
+const version = 20230015133212,
       datever = "?" + version.toString();
 
 // Path and Early
@@ -123,7 +123,7 @@ function loadTime() {
 
 // Move forward with loading the pages
 function forward() {
-    if (!pakoHere && !forageHere) {return;}
+    if (!pakoHere || !forageHere) {return;}
 
     addScript("appendix/" + pathway()+datever, true);
 }
