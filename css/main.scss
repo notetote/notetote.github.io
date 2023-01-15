@@ -653,6 +653,7 @@ main.about {
             }
         }
         @media screen and (max-width: 760px) {
+            gap: 2rem;
             padding-top: 2rem;
             padding-bottom: 2rem;
             &.right, &.left {
