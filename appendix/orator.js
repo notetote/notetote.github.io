@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230015213413,
+const version = 20230015224724,
       datever = "?" + version.toString();
 
 // Declare app state if using app
@@ -188,5 +188,6 @@ document.addEventListener("keyEvent",function(e) {
     document.addEventListener("readystatechange",function() {
         if (document.readyState !== "complete") {return;}
         loadTime();
+        favSwitch(true);favSwitch(false);favSwitch(colorScheme.matches);
     });
 })();
