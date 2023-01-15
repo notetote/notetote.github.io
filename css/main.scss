@@ -657,7 +657,7 @@ main.about {
             padding-bottom: 2rem;
             &.right, &.left {
                 &.flex.flex-responsive {
-                    flex-direction: column;
+                    flex-direction: column-reverse;
                 }
                 h1, p {
                     text-align: center;
