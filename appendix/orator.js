@@ -1,6 +1,13 @@
 // Version Extension
-const version = 20230015162013,
+const version = 20230015165254,
       datever = "?" + version.toString();
+
+// Declare app state if using app
+(function appState() {
+    if (window.location.search === "?app") {
+        localStorage.appState = "true";
+    }
+})();
 
 // Path and Early
 const path = window.location.pathname.replace(/\//g,"");
