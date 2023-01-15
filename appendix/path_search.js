@@ -1,3 +1,5 @@
+document.title = "Search at NoteNibba";
+
 document.getElementsByTagName("body")[0].innerHTML = localGet("fable_search");
 
 document.getElementsByTagName("scrolltop")[0].outerHTML = localGet("fable_scroll");

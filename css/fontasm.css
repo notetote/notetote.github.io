@@ -1,11 +1,9 @@
 @font-face {
   font-family: "Fontasm";
-  src: url("../fonts/fontasm.woff2?20230003094535") format("woff2"),
-       url("../fonts/fontasm.woff?20230003094535") format("woff");
+  src: url("../fonts/fontasm.woff2?20230015210152") format("woff2"), url("../fonts/fontasm.woff?20230015210152") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-
 .fa {
   display: inline-block;
   font: normal normal normal 1rem "Fontasm";
@@ -14,76 +12,75 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.fa-notenibba:before {
-  content: "\E000";
+.fa.fa-notenibba:before {
+  content: "\e000";
 }
-.fa-clear:before {
-  content: "\58";
+.fa.fa-clear:before {
+  content: "X";
 }
-.fa-search:before {
-  content: "\53";
+.fa.fa-search:before {
+  content: "S";
 }
-.fa-menu:before {
-  content: "\E001";
+.fa.fa-menu:before {
+  content: "\e001";
 }
-.fa-arrow:before {
-  content: "\E002";
+.fa.fa-arrow:before {
+  content: "\e002";
 }
-.fa-all:before {
-  content: "\E003";
+.fa.fa-all:before {
+  content: "\e003";
 }
-.fa-notes:before {
-  content: "\E004";
+.fa.fa-notes:before {
+  content: "\e004";
 }
-.fa-videos:before {
-  content: "\E005";
+.fa.fa-videos:before {
+  content: "\e005";
 }
-.fa-internal:before {
-  content: "\E006";
+.fa.fa-internal:before {
+  content: "\e006";
 }
-.fa-download:before {
-  content: "\E007";
+.fa.fa-download:before {
+  content: "\e007";
 }
-.fa-star:before {
-  content: "\E008";
+.fa.fa-star:before {
+  content: "\e008";
 }
-.fa-load:before {
-  content: "\E009";
+.fa.fa-load:before {
+  content: "\e009";
 }
-.fa-close:before {
-  content: "\E00A";
+.fa.fa-close:before {
+  content: "\e00a";
 }
-.fa-auto:before {
-  content: "\E00B";
+.fa.fa-auto:before {
+  content: "\e00b";
 }
-.fa-day:before {
-  content: "\E00C";
+.fa.fa-day:before {
+  content: "\e00c";
 }
-.fa-night:before {
-  content: "\E00D";
+.fa.fa-night:before {
+  content: "\e00d";
 }
-.fa-arrow-filled:before {
-  content: "\E00E";
+.fa.fa-arrow-filled:before {
+  content: "\e00e";
 }
-.fa-about:before {
-  content: "\E00F";
+.fa.fa-about:before {
+  content: "\e00f";
 }
-.fa-group:before {
-  content: "\E010";
+.fa.fa-group:before {
+  content: "\e010";
 }
-.fa-settings:before {
-  content: "\E011";
+.fa.fa-settings:before {
+  content: "\e011";
 }
-.fa-telegram:before {
-  content: "\E012";
+.fa.fa-telegram:before {
+  content: "\e012";
 }
-.fa-download-filled:before {
-  content: "\E013";
+.fa.fa-download-filled:before {
+  content: "\e013";
 }
-.fa-feedback:before {
-  content: "\E014";
+.fa.fa-feedback:before {
+  content: "\e014";
 }
-.fa-home:before {
-  content: "\E015";
-}
+.fa.fa-home:before {
+  content: "\e015";
+}/*# sourceMappingURL=fontasm.css.map */

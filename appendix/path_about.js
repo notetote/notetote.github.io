@@ -1,3 +1,5 @@
+document.title = "About NoteNibba";
+
 document.getElementsByTagName("body")[0].innerHTML = localGet("fable_about");
 
 let sections = document.querySelectorAll("main section");
