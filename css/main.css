@@ -656,6 +656,9 @@ main.about section svg {
   max-width: calc(100% - 2rem);
   height: auto;
 }
+main.about section svg path:first-of-type {
+  opacity: 0.75;
+}
 main.about section h1, main.about section p {
   text-decoration: none;
   margin: 0;

@@ -600,6 +600,9 @@ main.about {
             width: 26rem;
             max-width: calc(100% - 2rem);
             height: auto;
+            path:first-of-type {
+                opacity: .75;
+            }
         }
         h1, p {
             text-decoration: none;
