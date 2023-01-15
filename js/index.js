@@ -14,8 +14,8 @@ function getJSON(key) {
     });
 }
 */
-var sObj = window.indexJSON.index, //getJSON("index").index, // search term = sKey;
-    primeBox = document.getElementsByTagName("primary")[0];
+const sObj = window.indexJSON.index, //getJSON("index").index, // search term = sKey;
+      primeBox = document.getElementsByTagName("primary")[0];
 
 /*
 <a class="flex flex-row flex-center-v" onclick="primeClick('links_macbeth',this)">

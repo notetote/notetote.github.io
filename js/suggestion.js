@@ -1,4 +1,4 @@
-var suggestThese = ["Hamlet","Macbeth"];
+let suggestThese = ["Hamlet","Macbeth"];
 
 function nowSuggest(key) {
     let suggestHere = document.getElementsByClassName("search-suggest")[0];

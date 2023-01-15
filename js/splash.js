@@ -1,6 +1,6 @@
-var dots = document.querySelectorAll(".dots");
+let dots = document.querySelectorAll(".dots");
 
-const splashInterval = setInterval(function() {
+setInterval(function() {
     if (dots[0].innerHTML.match(". . .")) {
         dots[0].innerHTML = ".";
         dots[1].innerHTML = dots[0].innerHTML;

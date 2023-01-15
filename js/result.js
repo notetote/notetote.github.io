@@ -1,4 +1,4 @@
-var sKey;
+let sKey;
 
 function scrapeLink() {
     let vars = {};
@@ -14,7 +14,7 @@ function getKey() {
 
 getKey();
 
-var badChar = [
+const badChar = [
     "^",
     "$",
     ".",
@@ -75,7 +75,7 @@ function makeResults(url) {
 
 makeResults("null");
 
-var sForm = document.querySelector("form.search-box");
+const sForm = document.querySelector("form.search-box");
 
 sForm.addEventListener("submit", function(event) {
     event.preventDefault();

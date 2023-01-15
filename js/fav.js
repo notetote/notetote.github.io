@@ -1,5 +1,5 @@
-var colorScheme = window.matchMedia("(prefers-color-scheme: dark)"),
-    linkRel = document.querySelectorAll("head link[rel='apple-touch-icon'],[rel='icon'],[rel='image_src'],[rel='manifest'],[rel='shortcut icon']");
+const colorScheme = window.matchMedia("(prefers-color-scheme: dark)"),
+      linkRel = document.querySelectorAll("head link[rel='apple-touch-icon'],[rel='icon'],[rel='image_src'],[rel='manifest'],[rel='shortcut icon']");
 
 function favSwitch() {
     for (let x = 0; x < linkRel.length; x++) {

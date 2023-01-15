@@ -104,7 +104,7 @@ html {
     @include resFont(1179px, 17px);
     @include resFont(959px, 16px);
     @include resFont(839px, 15px);
-    @include resFont(759px, 14px);
+    /*@include resFont(759px, 14px);*/
 }
 body {
     color: var(--text-color);
@@ -180,8 +180,8 @@ content {
     z-index: 1;
 }
 scrolltop {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3rem;
+    width: 3rem;
     color: var(--active-fg);
     background: var(--active-bg);
     border-radius: $radius;

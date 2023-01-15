@@ -1,8 +1,8 @@
 sessionStorage.removeItem("primeNow");
 
-var sBox = document.querySelector(".search-box input[type='text']"),
-    sFind = document.querySelector(".search-box input[type='submit']"),
-    sClear = document.querySelector(".search-box input[type='button']");
+const sBox = document.querySelector(".search-box input[type='text']"),
+      sFind = document.querySelector(".search-box input[type='submit']"),
+      sClear = document.querySelector(".search-box input[type='button']");
 
 function clearCheck() {
     if (sBox.value == "") {
