@@ -1,0 +1,91 @@
+$version: 20230015210152;
+
+@font-face {
+  font-family: "Fontasm";
+  src: url("../fonts/fontasm.woff2?"+$version) format("woff2"),
+       url("../fonts/fontasm.woff?"+$version) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 1rem "Fontasm";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.fa-notenibba:before {
+    content: "\E000";
+  }
+  &.fa-clear:before {
+    content: "\58";
+  }
+  &.fa-search:before {
+    content: "\53";
+  }
+  &.fa-menu:before {
+    content: "\E001";
+  }
+  &.fa-arrow:before {
+    content: "\E002";
+  }
+  &.fa-all:before {
+    content: "\E003";
+  }
+  &.fa-notes:before {
+    content: "\E004";
+  }
+  &.fa-videos:before {
+    content: "\E005";
+  }
+  &.fa-internal:before {
+    content: "\E006";
+  }
+  &.fa-download:before {
+    content: "\E007";
+  }
+  &.fa-star:before {
+    content: "\E008";
+  }
+  &.fa-load:before {
+    content: "\E009";
+  }
+  &.fa-close:before {
+    content: "\E00A";
+  }
+  &.fa-auto:before {
+    content: "\E00B";
+  }
+  &.fa-day:before {
+    content: "\E00C";
+  }
+  &.fa-night:before {
+    content: "\E00D";
+  }
+  &.fa-arrow-filled:before {
+    content: "\E00E";
+  }
+  &.fa-about:before {
+    content: "\E00F";
+  }
+  &.fa-group:before {
+    content: "\E010";
+  }
+  &.fa-settings:before {
+    content: "\E011";
+  }
+  &.fa-telegram:before {
+    content: "\E012";
+  }
+  &.fa-download-filled:before {
+    content: "\E013";
+  }
+  &.fa-feedback:before {
+    content: "\E014";
+  }
+  &.fa-home:before {
+    content: "\E015";
+  }
+}
