@@ -7,17 +7,17 @@ sections[0].innerHTML = sections[0].innerHTML + localGet("svg_about1");
 sections[1].innerHTML = sections[1].innerHTML + localGet("svg_about2");
 sections[2].innerHTML = sections[2].innerHTML + localGet("svg_about3");
 
-document.getElementsByTagName("scrolltop")[0].outerHTML = localGet("fable_scroll");
+document.getElementsByTagName("scrolltop")[0].outerHTML = localGet("parable_scroll");
 
-document.getElementsByTagName("header")[0].outerHTML = localGet("fable_header");
+document.getElementsByTagName("header")[0].outerHTML = localGet("parable_header");
 
 document.getElementsByClassName("logo-top")[0].innerHTML = localGet("svg_side") + localGet("svg_none");
 
 document.getElementsByClassName("logo-side")[0].innerHTML = localGet("svg_side") + localGet("svg_none");
 
-document.getElementsByTagName("footer")[0].outerHTML = localGet("fable_footer");
+document.getElementsByTagName("footer")[0].outerHTML = localGet("parable_footer");
 
-document.getElementsByTagName("nav")[0].outerHTML = localGet("fable_nav");
+document.getElementsByTagName("nav")[0].outerHTML = localGet("parable_nav");
 
 document.querySelector("nav a[href='about']").classList.add("active");
 
