@@ -86,6 +86,8 @@ function checkLocal() {/*
     
                countLocal("mainCSS") +
                countLocal("fontasmCSS") +
+               countLocal("color_dusk_aCSS") +
+               countLocal("color_dawn_aCSS") +
     
                countLocal("favJS") +
                countLocal("filterJS") +
@@ -114,7 +116,7 @@ function checkLocal() {/*
                countLocal("svg_about2") +
                countLocal("svg_about3");
 
-    totalInt = 28;
+    totalInt = 30;
     
     value = ((localInt/totalInt)*100);
     percent.innerText = value.toFixed(2) + "%";
@@ -173,6 +175,9 @@ function fetchRest(type, key, folder) {
 
 fetchRest("css","main");
 fetchRest("css","fontasm");
+fetchRest("css","color_dusk_a");
+fetchRest("css","color_dawn_a");
+
 fetchRest("js","fav");
 fetchRest("js","filter");
 fetchRest("js","index");

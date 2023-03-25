@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230128162809,
+const version = 20230226003621,
       datever = "?" + version.toString();
 
 // Declare app state if using app
@@ -8,6 +8,16 @@ const version = 20230128162809,
         localStorage.appState = "true";
     }
 })();
+
+// Default settings
+function setDefault(key,val) {
+    if (!localStorage.getItem(key)) {
+        localStorage.setItem(key,val);
+    }
+}
+setDefault("theme","auto");
+setDefault("themeDusk","color_dusk_aCSS");
+setDefault("themeDawn","color_dawn_aCSS");
 
 // Path and Early
 const path = window.location.pathname.replace(/\//g,"");
@@ -58,9 +68,17 @@ function inStyle(key, sid) {
     document.head.appendChild(style);
 }
 
-// Clear load
+// Clear load while keeping theme choice
 function clearLoad() {
+    let theme = localStorage.theme,
+        themeDusk = localStorage.themeDusk,
+        themeDawn = localStorage.themeDawn;
+
     localStorage.clear();
+
+    localStorage.theme = theme;
+    localStorage.themeDusk = themeDusk;
+    localStorage.themeDawn = themeDawn;
 }
 
 // Get local resource
@@ -176,6 +194,8 @@ document.addEventListener("keyEvent",function(e) {
     }
 
     if (!pathway().match(/_load\./)) { // Don't load fontasm and main CSS in the loading page
+        inStyle(localGet("color_dusk_aCSS"),"duskCSS");
+        inStyle(localGet("color_dawn_aCSS"),"dawnCSS");
         inStyle(localGet("mainCSS"),"mainCSS");
         inStyle(localGet("fontasmCSS"),"fontasmCSS");
     }
