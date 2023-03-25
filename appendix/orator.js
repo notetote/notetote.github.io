@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230226003621,
+const version = 20230226004335,
       datever = "?" + version.toString();
 
 // Declare app state if using app
@@ -194,8 +194,8 @@ document.addEventListener("keyEvent",function(e) {
     }
 
     if (!pathway().match(/_load\./)) { // Don't load fontasm and main CSS in the loading page
-        inStyle(localGet("color_dusk_aCSS"),"duskCSS");
-        inStyle(localGet("color_dawn_aCSS"),"dawnCSS");
+        inStyle(localGet(localStorage.themeDusk),"duskCSS");
+        inStyle(localGet(localStorage.themeDawn),"dawnCSS");
         inStyle(localGet("mainCSS"),"mainCSS");
         inStyle(localGet("fontasmCSS"),"fontasmCSS");
     }
