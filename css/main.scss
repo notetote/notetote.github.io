@@ -894,18 +894,22 @@ titlecard {
 .font-light {
     font-weight: 300;
 }
-
+/*
 .noscroll {
     overflow: hidden;
 }
-.blur {
-    filter: blur(4px);
-}
+*/
 .hide {
     display: none !important;
 }
 .invisible {
     visibility: hidden;
+}
+
+body.menu>*:not(nav) {
+    filter: blur(4px);
+    overflow: hidden;
+    transition: filter .1s linear;
 }
 
 // Logo Colors
