@@ -217,7 +217,7 @@ nav {
         z-index: 0;
         opacity: 0;
         background: var(--menu-shade);
-        backdrop-filter: blur(4px);
+        /*backdrop-filter: blur(4px);*/
         transition: opacity .1s linear;
     }
     sidebar {
@@ -897,6 +897,9 @@ titlecard {
 
 .noscroll {
     overflow: hidden;
+}
+.blur {
+    filter: blur(4px);
 }
 .hide {
     display: none !important;
