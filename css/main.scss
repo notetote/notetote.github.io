@@ -217,7 +217,7 @@ nav {
         z-index: 0;
         opacity: 0;
         background: var(--menu-shade);
-        /*backdrop-filter: blur(4px);*/
+        backdrop-filter: blur(4px);
         transition: opacity .1s linear;
     }
     sidebar {
@@ -894,22 +894,14 @@ titlecard {
 .font-light {
     font-weight: 300;
 }
-/*
 .noscroll {
     overflow: hidden;
 }
-*/
 .hide {
     display: none !important;
 }
 .invisible {
     visibility: hidden;
-}
-
-body.menu>*:not(nav) {
-    filter: blur(4px);
-    overflow: hidden;
-    transition: filter .1s linear;
 }
 
 // Logo Colors

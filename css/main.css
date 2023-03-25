@@ -210,7 +210,8 @@ nav backdrop {
   z-index: 0;
   opacity: 0;
   background: var(--menu-shade);
-  /*backdrop-filter: blur(4px);*/
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   transition: opacity 0.1s linear;
 }
 nav sidebar {
@@ -959,23 +960,16 @@ titlecard {
   font-weight: 300;
 }
 
-/*
 .noscroll {
-    overflow: hidden;
+  overflow: hidden;
 }
-*/
+
 .hide {
   display: none !important;
 }
 
 .invisible {
   visibility: hidden;
-}
-
-body.menu > *:not(nav) {
-  filter: blur(4px);
-  overflow: hidden;
-  transition: filter 0.1s linear;
 }
 
 svg .st1 {
