@@ -18,4 +18,6 @@ function favSwitch(key) {
 
 favSwitch(colorScheme.matches);
 
-colorScheme.addEventListener("change",favSwitch(colorScheme.matches));
+colorScheme.addEventListener("change",function() {
+    favSwitch(colorScheme.matches);
+});
