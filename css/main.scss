@@ -47,9 +47,8 @@ $btnopacity: .9;
         transform: rotate(359deg) scale(.8);
     }
 }
-
-:root {
 /*
+:root {
     --accent-color: #868cff;
     --accent-color-a: #6b6fcc;
     --accent-color-b: #505399;
@@ -66,12 +65,11 @@ $btnopacity: .9;
     --text-color: #eeeeee;
     --text-stark: #ffffff;
     --hover-bg: #242424;
-*/
     --titlecard-color: var(--results-background);
     --active-bg: var(--accent-color);
     --active-fg: var(--results-background);
 }
-
+*/
 * {
     scrollbar-width: thin !important;
     scrollbar-color: var(--accent-color) #00000000 !important;
