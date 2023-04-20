@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230320215357,
+const version = 20230320220650,
       datever = "?" + version.toString();
 
 // Declare app state if using app
@@ -18,6 +18,7 @@ function setDefault(key,val) {
 setDefault("theme","auto");
 setDefault("themeDusk","tdusk_aCSS");
 setDefault("themeDawn","tdawn_aCSS");
+setDefault("themeColor","tcolor_purpleCSS");
 
 // Path and Early
 const path = window.location.pathname.replace(/\//g,"");
@@ -196,6 +197,7 @@ document.addEventListener("keyEvent",function(e) {
     if (!pathway().match(/_load\./)) { // Don't load fontasm and main CSS in the loading page
         inStyle(localGet(localStorage.themeDusk),"duskCSS");
         inStyle(localGet(localStorage.themeDawn),"dawnCSS");
+        inStyle(localGet(localStorage.themeColor),"colorCSS");
         inStyle(localGet("mainCSS"),"mainCSS");
         inStyle(localGet("fontasmCSS"),"fontasmCSS");
     }
