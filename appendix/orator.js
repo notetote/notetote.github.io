@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230226011227,
+const version = 20230320215357,
       datever = "?" + version.toString();
 
 // Declare app state if using app
@@ -16,8 +16,8 @@ function setDefault(key,val) {
     }
 }
 setDefault("theme","auto");
-setDefault("themeDusk","color_dusk_aCSS");
-setDefault("themeDawn","color_dawn_aCSS");
+setDefault("themeDusk","tdusk_aCSS");
+setDefault("themeDawn","tdawn_aCSS");
 
 // Path and Early
 const path = window.location.pathname.replace(/\//g,"");
