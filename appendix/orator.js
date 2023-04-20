@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230320220650,
+const version = 20230320225040,
       datever = "?" + version.toString();
 
 // Declare app state if using app
@@ -200,6 +200,8 @@ document.addEventListener("keyEvent",function(e) {
         inStyle(localGet(localStorage.themeColor),"colorCSS");
         inStyle(localGet("mainCSS"),"mainCSS");
         inStyle(localGet("fontasmCSS"),"fontasmCSS");
+
+        inScript(localGet("themeJS"),"themeJS", true);
     }
 
     document.addEventListener("DOMContentLoaded",function() {

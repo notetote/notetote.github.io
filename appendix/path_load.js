@@ -91,6 +91,7 @@ function checkLocal() {/*
                countLocal("tcolor_purpleCSS") +
     
                countLocal("favJS") +
+               countLocal("themeJS") +
                countLocal("filterJS") +
                countLocal("indexJS") +
                countLocal("menuJS") +
@@ -117,7 +118,7 @@ function checkLocal() {/*
                countLocal("svg_about2") +
                countLocal("svg_about3");
 
-    totalInt = 31;
+    totalInt = 32;
     
     value = ((localInt/totalInt)*100);
     percent.innerText = value.toFixed(2) + "%";
@@ -181,6 +182,7 @@ fetchRest("css","tdawn_a");
 fetchRest("css","tcolor_purple");
 
 fetchRest("js","fav");
+fetchRest("js","theme");
 fetchRest("js","filter");
 fetchRest("js","index");
 fetchRest("js","menu");
