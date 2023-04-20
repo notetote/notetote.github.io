@@ -23,6 +23,10 @@ function setAuto() {
 function setTheme() {
     let themeChoice = localStorage.getItem("theme");
 
+    try {
+        document.querySelector(`nav btn[onclick*='${themeChoice}']`).classList.add("active");
+    } catch(e) {}
+
     if (themeChoice === "auto") {
         setAuto();
     } else if (themeChoice === "dawn") {
@@ -33,3 +37,15 @@ function setTheme() {
 }
 
 setTheme();
+
+function tSwitch(key) {
+    localStorage.setItem("theme",key);
+
+    try {
+        document.querySelector("nav bottom btn.active").classList.remove("active");
+    } catch(e) {}
+
+    document.querySelector(`nav btn[onclick*='${key}']`).classList.add("active");
+
+    setTheme();
+}
