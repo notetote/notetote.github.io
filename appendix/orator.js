@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230320225040,
+const version = 20230320234902,
       datever = "?" + version.toString();
 
 // Declare app state if using app
@@ -144,6 +144,7 @@ function loadTime() {
         document.querySelectorAll("footer span")[1].innerHTML = "In " + loadExit + " seconds";
     } catch(e) {}
     navVer(); // So that both happen together
+    setTheme(); // Update nav button state according to theme
 }
 
 // Move forward with loading the pages

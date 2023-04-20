@@ -24,6 +24,6 @@ document.querySelector("nav a[href='about']").classList.add("active");
 inScript(localGet("scrollJS") +
          localGet("menuJS")
         ,"oneJS");
-    
+
 loadTime();
 appendectomy();
