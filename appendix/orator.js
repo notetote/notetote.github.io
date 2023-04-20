@@ -1,5 +1,5 @@
 // Version Extension
-const version = 20230320234902,
+const version = 20230320235857,
       datever = "?" + version.toString();
 
 // Declare app state if using app
@@ -144,7 +144,6 @@ function loadTime() {
         document.querySelectorAll("footer span")[1].innerHTML = "In " + loadExit + " seconds";
     } catch(e) {}
     navVer(); // So that both happen together
-    setTheme(); // Update nav button state according to theme
 }
 
 // Move forward with loading the pages
@@ -214,5 +213,8 @@ document.addEventListener("keyEvent",function(e) {
         if (document.readyState !== "complete") {return;}
         loadTime();
         favSwitch(true);favSwitch(false);favSwitch(colorScheme.matches);
+        try {
+            setTheme(); // Update nav button state according to theme
+        } catch(e) {}
     });
 })();
