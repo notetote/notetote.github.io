@@ -32,7 +32,7 @@ const sObj = window.indexJSON.index, //getJSON("index").index, // search term = 
 function primeList(key) {
     let anchor = document.createElement("a");
     anchor.className = "flex flex-row flex-center-v";
-    anchor.href = `/search.html?s=${(sObj[key].title + " " + sObj[key].author).toLowerCase().replace(/\ /g, "+")}`;
+    anchor.href = `/search?s=${(sObj[key].title + " " + sObj[key].author).toLowerCase().replace(/\ /g, "+")}`;
     anchor.setAttribute("onclick",`primeClick('${sObj[key].json}',this);return false`);
     anchor.innerHTML = `<info class="flex flex-column full-width"><topic class="text-trim">${sObj[key].title}</topic><author class="text-trim">${sObj[key].author}</author></info><panel class="flex flex-row flex-center-h flex-center-v"><i class="fa fa-load mid"></i></panel>`;
     primeBox.appendChild(anchor);
