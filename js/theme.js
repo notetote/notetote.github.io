@@ -40,14 +40,20 @@ setTheme();
 
 function tSwitch(key) {
     document.body.classList.add("swap");
-    localStorage.setItem("theme",key);
 
-    try {
-        document.querySelector("nav bottom btn.active").classList.remove("active");
-    } catch(e) {}
+    setTimeout(function(){
+        localStorage.setItem("theme",key);
+        
+        try {
+            document.querySelector("nav bottom btn.active").classList.remove("active");
+        } catch(e) {}
+        
+        document.querySelector(`nav btn[onclick*='${key}']`).classList.add("active");
+        
+        setTheme();
+    }, 100);
 
-    document.querySelector(`nav btn[onclick*='${key}']`).classList.add("active");
-
-    setTheme();
-    document.body.classList.remove("swap");
+    setTimeout(function(){
+        document.body.classList.remove("swap");
+    }, 200);
 }
