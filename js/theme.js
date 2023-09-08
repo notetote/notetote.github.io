@@ -51,9 +51,9 @@ function tSwitch(key) {
         document.querySelector(`nav btn[onclick*='${key}']`).classList.add("active");
         
         setTheme();
-    }, 100);
+    }, 200);
 
     setTimeout(function(){
         document.body.classList.remove("swap");
-    }, 200);
+    }, 400);
 }
