@@ -2,7 +2,7 @@ $radius: .25rem;
 $headerHeight: 3.25rem;
 $resultsFg: 65%;
 $resultsBg: 35%;
-$globaldelay: .1s;
+$globalduration: .1s;
 $minimizedelay: .2s;
 $btnopacity: .9;
 $themebox: 3rem;
@@ -75,23 +75,28 @@ $themebox: 3rem;
     scrollbar-width: thin !important;
     scrollbar-color: var(--accent-color) #00000000 !important;
     box-sizing: border-box;
-    transition-duration: $globaldelay;
-    transition-timing-function: ease-in-out;
     outline: none;
 }
 *::-webkit-scrollbar {
-  width: 7px !important;
-  height: 7px !important;
+    width: 7px !important;
+    height: 7px !important;
 }
 *::-webkit-scrollbar-thumb {
-  background: var(--accent-color) !important;
+    background: var(--accent-color) !important;
 }
 *::-webkit-scrollbar-track {
-  background: #00000000 !important;
+    background: #00000000 !important;
 }
 ::selection {
     color: var(--active-fg);
     background: var(--active-bg);
+}
+body:not(.swap), body:not(.swap) * {
+    transition-duration: $globalduration;
+    transition-timing-function: ease-in-out;
+}
+body.swap, body.swap * {
+    transition-duration: 0s;
 }
 body,
 html {
@@ -218,7 +223,7 @@ nav {
         opacity: 0;
         background: var(--menu-shade);
         backdrop-filter: blur(4px);
-        transition: opacity $globaldelay linear;
+        transition: opacity $globalduration linear;
     }
     sidebar {
         z-index: 1;
@@ -227,7 +232,7 @@ nav {
         right: -22rem;
         height: 100%;
         width: 22rem;
-        transition: right $globaldelay ease-in-out, left $globaldelay ease-in-out, box-shadow $globaldelay ease-in-out;
+        transition: right $globalduration ease-in-out, left $globalduration ease-in-out, box-shadow $globalduration ease-in-out;
         background: var(--results-background);
         box-shadow: 0 0 0 0 transparent;
         overflow-y: auto;
@@ -441,7 +446,7 @@ main primary {
             right: 1rem;
             column-gap: 1rem;
             opacity: 0;
-            transition: opacity $globaldelay ease-in-out;
+            transition: opacity $globalduration ease-in-out;
             i.fa {
                 animation: loading 2s infinite linear;
             }
@@ -695,7 +700,7 @@ main.settings {
                 width: $themebox;
                 background: var(--accent-color);
                 border-radius: $radius;
-                transition: transform $globaldelay ease-in-out;
+                transition: transform $globalduration ease-in-out;
                 cursor: pointer;
                 span {
                     display: block;
