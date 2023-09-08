@@ -6,6 +6,7 @@ $globalduration: .1s;
 $minimizedelay: .2s;
 $btnopacity: .9;
 $themebox: 3rem;
+$padsides: 14.5rem; // calculated with logo width considered
 
 @mixin searchBoxHome() {
     width: 32rem;
@@ -384,7 +385,7 @@ main {
         border-top: 1px solid var(--results-border);
         border-bottom: 1px solid var(--results-border);
         @include resMainPad(1400px, 8rem);
-        @include resMainPad(1700px, 15rem);
+        @include resMainPad(1700px, $padsides);
     }
     primary, secondary {
         height: 100%;
@@ -607,7 +608,7 @@ main.about {
         word-wrap: break-word;
         padding: 0 2rem;
         @include resMainPad(1400px, 8rem);
-        @include resMainPad(1700px, 15rem);
+        @include resMainPad(1700px, $padsides);
         svg {
             width: 26rem;
             max-width: calc(100% - 2rem);
@@ -692,7 +693,7 @@ main.settings {
         padding: 2rem 1.5rem;
         @include resMainPad(541px, 6.5rem);
         @include resMainPad(761px, 4.5rem);
-        @include resMainPad(1401px, 15rem);
+        @include resMainPad(1401px, $padsides);
         sectitle {
             font-size: 2rem;
         }
@@ -759,7 +760,7 @@ titlecard {
     font-size: 1.3rem;
     /*text-shadow: 0 0 32px rgba(0,0,0,0.5);*/
     text-align: justify;
-    padding: 1rem 15rem;
+    padding: 1rem $padsides;
     /*transition: height $minimizedelay linear, padding $minimizedelay linear;*/
     @include resTitlePad(1400px, 4.5rem, justify);
     @include resTitlePad(760px, 6.5rem, justify);

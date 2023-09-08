@@ -397,7 +397,7 @@ main.results {
 }
 @media screen and (min-width: 1700px) {
   main.results {
-    padding: 2rem 15rem;
+    padding: 2rem 14.5rem;
   }
 }
 main primary, main secondary {
@@ -648,7 +648,7 @@ main.about section {
 }
 @media screen and (min-width: 1700px) {
   main.about section {
-    padding: 2rem 15rem;
+    padding: 2rem 14.5rem;
   }
 }
 main.about section svg {
@@ -758,7 +758,7 @@ main.settings section {
 }
 @media screen and (min-width: 1401px) {
   main.settings section {
-    padding: 2rem 15rem;
+    padding: 2rem 14.5rem;
   }
 }
 main.settings section sectitle {
@@ -827,7 +827,7 @@ titlecard {
   font-size: 1.3rem;
   /*text-shadow: 0 0 32px rgba(0,0,0,0.5);*/
   text-align: justify;
-  padding: 1rem 15rem;
+  padding: 1rem 14.5rem;
   /*transition: height $minimizedelay linear, padding $minimizedelay linear;*/
   /*
   &.minimize {
