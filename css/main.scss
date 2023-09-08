@@ -898,6 +898,9 @@ titlecard {
         height: 2.5rem;
         width: auto;
     }
+    .txt-right {
+        margin-right: 12px; // width adjustment
+    }
     @media screen and (min-width: 540px) {
         .no-txt {
             display: inherit;

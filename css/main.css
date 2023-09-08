@@ -987,6 +987,9 @@ titlecard {
   height: 2.5rem;
   width: auto;
 }
+.logo-side .txt-right {
+  margin-right: 12px;
+}
 @media screen and (min-width: 540px) {
   .logo-side .no-txt {
     display: inherit;
