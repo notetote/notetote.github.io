@@ -58,11 +58,11 @@ function makeResults(url) {
     }
 
     sBox.value = sKey.replace("dQw4w9WgXcQ","");
-    document.title = sKey + " at NoteNibba";
+    document.title = sKey + " at Notetote";
 
     if (sKey == "") {
         sKey = "dQw4w9WgXcQ";
-        document.title = "Search at NoteNibba";
+        document.title = "Search at Notetote";
     }
     clearCheck();
     doPrime();

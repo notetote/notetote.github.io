@@ -13,7 +13,7 @@ function focusPrimary() {
         document.querySelector("secondary").classList.add("primary");
     }), 100);
     document.querySelector("titlecard").innerText = "Search";
-    document.title = sKey + " at NoteNibba";
+    document.title = sKey + " at Notetote";
     setTimeout((function(){
         document.querySelector("secondary").classList.add("hide");
         clearSecond();
@@ -31,7 +31,7 @@ function focusSecondary() {
         document.querySelector("secondary").classList.add("secondary");
     }), 100);
     document.querySelector("titlecard").innerText = document.querySelector("primary a.active info topic").innerText;
-    document.title = document.querySelector("titlecard").innerText + " at NoteNibba";
+    document.title = document.querySelector("titlecard").innerText + " at Notetote";
     setTimeout((function(){
         document.querySelector("primary").classList.add("shide");
     }), 300);
@@ -53,7 +53,7 @@ function primeClick(file, target) {
     
     scrollUp();
     document.querySelector("titlecard").innerText = "Search";
-    document.title = sKey + " at NoteNibba";
+    document.title = sKey + " at Notetote";
     sessionStorage.setItem("primeNow",file);
 
     selectRemove();

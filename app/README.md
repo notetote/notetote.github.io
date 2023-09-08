@@ -18,8 +18,8 @@ Insert the following code in the `head` section of your pages:
     <link rel="manifest" href="app/site.webmanifest">
     <link rel="mask-icon" href="app/safari-pinned-tab.svg" color="#868cff">
     <link rel="shortcut icon" href="app/favicon.ico">
-    <meta name="apple-mobile-web-app-title" content="NoteNibba">
-    <meta name="application-name" content="NoteNibba">
+    <meta name="apple-mobile-web-app-title" content="Notetote">
+    <meta name="application-name" content="Notetote">
     <meta name="msapplication-TileColor" content="#603cba">
     <meta name="msapplication-TileImage" content="app/mstile-144x144.png">
     <meta name="msapplication-config" content="app/browserconfig.xml">
