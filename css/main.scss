@@ -310,6 +310,9 @@ nav {
                 padding: .8rem 1rem;
                 background: var(--background);
                 border-radius: $radius;
+                &.flex-grow {
+                    transition: flex-grow .1s ease-in-out !important;
+                }
                 &:hover, &:focus {
                     background: var(--hover-bg);
                     border-color: var(--results-border);
