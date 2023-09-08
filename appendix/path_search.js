@@ -1,4 +1,4 @@
-document.title = "Search at NoteNibba";
+document.title = "Search at Notetote";
 
 document.getElementsByTagName("body")[0].innerHTML = localGet("fable_search");
 

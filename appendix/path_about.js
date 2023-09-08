@@ -1,4 +1,4 @@
-document.title = "About NoteNibba";
+document.title = "About Notetote";
 
 document.getElementsByTagName("body")[0].innerHTML = localGet("fable_about");
 

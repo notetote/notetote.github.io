@@ -1,4 +1,4 @@
-document.title = "Loading NoteNibba";
+document.title = "Loading Notetote";
 
 inStyle(`:root{--accent-color:#868cff;--accent-color-a:#6b6fcc;--accent-color-b:#505399;--accent-color-c:#353765;--background:#1c1c1c;--search-button:#cccccc;--search-box-bg:#333333;--search-box-border:#161616;--search-box-hover:#444444;--results-background:#161616;--results-border:transparent;--menu-shade:#00000065;--menu-shadow:#000000;--text-color:#eeeeee;--text-stark:#ffffff;--titlecard-color:var(--results-background);--hover-bg:#242424;--active-bg:var(--accent-color);--active-fg:var(--results-background)}`,
         "themeCSS");
