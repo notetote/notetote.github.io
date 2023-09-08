@@ -39,6 +39,7 @@ function setTheme() {
 setTheme();
 
 function tSwitch(key) {
+    document.body.classList.add("swap");
     localStorage.setItem("theme",key);
 
     try {
@@ -48,4 +49,5 @@ function tSwitch(key) {
     document.querySelector(`nav btn[onclick*='${key}']`).classList.add("active");
 
     setTheme();
+    document.body.classList.remove("swap");
 }
