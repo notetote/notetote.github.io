@@ -41,19 +41,17 @@ setTheme();
 function tSwitch(key) {
     document.body.classList.add("swap");
 
-    setTimeout(function(){
-        localStorage.setItem("theme",key);
+    localStorage.setItem("theme",key);
         
-        try {
-            document.querySelector("nav bottom btn.active").classList.remove("active");
-        } catch(e) {}
+    try {
+        document.querySelector("nav bottom btn.active").classList.remove("active");
+    } catch(e) {}
         
-        document.querySelector(`nav btn[onclick*='${key}']`).classList.add("active");
+    document.querySelector(`nav btn[onclick*='${key}']`).classList.add("active");
         
-        setTheme();
-    }, 100);
+    setTheme();
 
     setTimeout(function(){
         document.body.classList.remove("swap");
-    }, 300);
+    }, 200);
 }
