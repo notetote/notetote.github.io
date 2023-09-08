@@ -36,7 +36,8 @@
   scrollbar-width: thin !important;
   scrollbar-color: var(--accent-color) rgba(0, 0, 0, 0) !important;
   box-sizing: border-box;
-  transition: 0.1s;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
   outline: none;
 }
 
@@ -723,6 +724,91 @@ main.about section.center p {
   main.about section.right h1, main.about section.right p, main.about section.left h1, main.about section.left p {
     text-align: center;
   }
+}
+
+main.settings {
+  color: var(--text-color);
+  background: var(--results-background);
+}
+main.settings section {
+  gap: 1rem;
+  width: 100%;
+  word-wrap: break-word;
+  padding: 2rem 1.5rem;
+}
+@media screen and (min-width: 541px) {
+  main.settings section {
+    padding: 2rem 6.5rem;
+  }
+}
+@media screen and (min-width: 761px) {
+  main.settings section {
+    padding: 2rem 4.5rem;
+  }
+}
+@media screen and (min-width: 1401px) {
+  main.settings section {
+    padding: 2rem 15rem;
+  }
+}
+main.settings section sectitle {
+  font-size: 2rem;
+}
+main.settings section choicebox {
+  gap: 1rem;
+}
+main.settings section choicebox selbox {
+  height: 3rem;
+  width: 3rem;
+  background: var(--accent-color);
+  border-radius: 0.25rem;
+  transition: transform 0.1s ease-in-out;
+  cursor: pointer;
+}
+main.settings section choicebox selbox span {
+  display: block;
+  height: 40%;
+  width: 40%;
+  background: var(--results-background);
+  border-radius: 0.25rem;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+main.settings section choicebox selbox:hover, main.settings section choicebox selbox:focus {
+  transform: scale(1.1);
+}
+main.settings section choicebox selbox:active {
+  transform: scale(0.9);
+}
+main.settings section choicebox selbox.active {
+  cursor: default;
+  transform: scale(1);
+}
+main.settings section choicebox selbox.active span {
+  transform: scale(1);
+}
+main.settings section choicerec {
+  gap: 1rem;
+}
+main.settings section choicerec selrec {
+  height: 3rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: var(--search-box-bg);
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+main.settings section choicerec selrec selcall {
+  padding: 0 0.75rem;
+}
+main.settings section choicerec selrec:hover, main.settings section choicerec selrec:focus {
+  background: var(--search-box-hover);
+}
+main.settings section choicerec selrec selbox {
+  height: 3rem;
+  width: 3rem;
+  background: var(--accent-color);
 }
 
 titlecard {

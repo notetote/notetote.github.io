@@ -162,7 +162,7 @@ fetchThis("/json/index.json"+datever).then(function(value) {
     addScript("appendix/fable_search.min.js"+datever, true);
 
     addScript("appendix/parable_scroll.min.js"+datever, true);
-    addScript("appendix/parable_footer.min.js"+datever, true)
+    addScript("appendix/parable_footer.min.js"+datever, true);
     addScript("appendix/parable_header.min.js"+datever, true);
     addScript("appendix/parable_nav.min.js"+datever, true);
 });
